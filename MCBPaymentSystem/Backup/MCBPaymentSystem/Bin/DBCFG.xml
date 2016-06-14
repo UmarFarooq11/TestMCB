@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DatabaseConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <!--<UserID>dbo_samba_spds_pre</UserID>
+  <UserPassword>dbo_samba_spds_pre</UserPassword>-->
+  <UserID>mcb_payment</UserID>
+  <UserPassword>mcb</UserPassword>
+  <FWIP>SW-IRFAN</FWIP>
+  <FTPUSERID>a</FTPUSERID>
+  <FTPPASSWORD>a</FTPPASSWORD>
+  <FTPIP>132.147.160.19</FTPIP>
+  <DB>10g</DB>
+</DatabaseConfig>

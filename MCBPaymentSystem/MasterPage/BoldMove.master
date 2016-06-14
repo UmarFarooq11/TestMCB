@@ -1,0 +1,75 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="BoldMove.master.cs" Inherits="MasterPage_BoldMove" %>
+<%@ Register
+Assembly="AjaxControlToolkit"
+Namespace="AjaxControlToolkit"
+TagPrefix="ajaxToolkit" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>Untitled Page</title>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server">
+        </asp:ScriptManager>
+        <table cellspacing="0" width="100%">
+            <tr>
+                <td style="background-attachment: fixed; background-image: url(../images/VT/bgBlueHeader.gif);
+                    background-repeat: repeat-x; text-align: right;">
+                    &nbsp;<asp:Label ID="Label1" runat="server" Style="font-size: 8pt; font-family: Arial, Tahoma" Font-Bold="True"></asp:Label><asp:LinkButton ID="LinkButton1" runat="server"
+                            Font-Bold="True" Style="font-size: 8pt; font-family: Arial, Tahoma" CausesValidation="False" OnClick="LinkButton1_Click1">Log Out</asp:LinkButton></td>
+            </tr>
+            <tr>
+                <td style="background-attachment: fixed; background-repeat: no-repeat">
+                    <table width="100%" cellspacing="0">
+                        <tr>
+                            <td style="width: 39%">
+                                <asp:Image ID="Image1" runat="server" ImageUrl="~/images/NEW LOG.JPG" /></td>
+                            <td style="width: 40%; text-align: center;">
+                                <asp:UpdateProgress ID="UpdateProgress1" runat="server" DisplayAfter="1">
+                                    <ProgressTemplate>
+                                        <img src="../images/sp-progress2.gif" />
+                                    </ProgressTemplate>
+                                </asp:UpdateProgress>
+                            </td>
+                            <td style="width: 30%; text-align: right">
+                                <asp:Image ID="Image2" runat="server" ImageUrl="~/images/SAM_LOGO/LOGO1.JPG" /></td>
+                            <td style="width: 3px">
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table cellspacing="0" class="masterbar" width="100%">
+            <tr>
+                <td>
+                </td>
+            </tr>
+        </table>
+        <asp:contentplaceholder id="ContentPlaceHolder1" runat="server">
+            </asp:contentplaceholder>
+        <hr color="darkgray" />
+                <table cellspacing="0" width="100%">
+            <tr>
+               <td style="font-weight: bold; font-size: 9pt; color: #444444; font-family: Arial, Tahoma;
+                    text-align: center">
+                    For any clarification/Information related to the Transaction Banking Division,
+                    <br />
+                    please call our help desk on following numbers
+                    <br />
+                    Call: + 9221111-000-111; Ext: 1609, 1709, 2809, 2909 &amp; 4309
+                    <br />
+                    Fax: + 92212270609-12</td>
+            </tr>
+            <tr>
+                <td style="font-weight: bold; font-size: 9pt; color: #444444; font-family: Arial, Tahoma;
+                    text-align: center">
+                    </td>
+            </tr>
+        </table>
+        <asp:HyperLink ID="HyperLink1" runat="server" ImageUrl="~/images/Main_08.png" NavigateUrl="http://www.cr-pl.com">HyperLink</asp:HyperLink>
+    </form>
+</body>
+</html>

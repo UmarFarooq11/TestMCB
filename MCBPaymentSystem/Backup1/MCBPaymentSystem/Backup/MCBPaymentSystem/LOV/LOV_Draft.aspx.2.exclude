@@ -1,0 +1,173 @@
+<%@ Page Language="C#" MasterPageFile="~/MasterPage/RoutinePage.master" AutoEventWireup="true" CodeFile="LOV_Draft.aspx.cs" Inherits="Draft_frmRPS_Draft" Title = "Draft" %>
+<%@ Register
+Assembly="AjaxControlToolkit"
+Namespace="AjaxControlToolkit"
+TagPrefix="ajaxToolkit" %>
+<%@ Register src="../WebControls/AlphaSelection.ascx" tagname="AlphaSelection" tagprefix="uc1" %> 
+<%@ Register Assembly="EO.Web" Namespace="EO.Web" TagPrefix="eo" %> 
+
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+<asp:ScriptManager ID="ScriptManager1" runat="server">
+</asp:ScriptManager>
+<asp:Label ID="Label1" runat="server" Font-Names="Trebuchet MS" Font-Size="20pt"
+Text="Draft" Width="100%" SkinID="Heading"></asp:Label><ajaxToolkit:TabContainer ID="TabContainer1"
+runat="server" ActiveTabIndex="0" BackColor="#FFFFEE" Font-Names="Verdana" Font-Size="8pt"
+Style="font-size: 8pt; font-family: Verdana" CssClass="ajax__tab_xp1">
+<ajaxToolkit:TabPanel ID="TabPanel1" runat="server" HeaderText="TabPanel1">
+<HeaderTemplate>
+Basic Search
+</HeaderTemplate>
+<ContentTemplate>
+<table style="font-size: 8pt; font-family: Verdana" width="100%">
+<tr align="right">
+<td style="width: 25%; text-align: right">
+Draft No:</td>
+<td style="width: 25%; text-align: left">
+<asp:TextBox ID="TXT_DraftNo" runat="server" Width="80%"></asp:TextBox>
+</td>
+<td style="width: 25%; text-align: right">
+Corresponding Bank ID :</td>
+<td style="width: 25%; text-align: left">
+<asp:TextBox ID="TXT_CorrespondingBankID" runat="server" Width="80%"></asp:TextBox></td>
+</tr>
+<tr align="right">
+<td style="width: 25%; text-align: right">
+Principle Bank ID:</td>
+<td style="width: 25%; text-align: left">
+<asp:TextBox ID="TXT_PrincipleBankID" runat="server" Width="80%"></asp:TextBox>
+</td>
+<td style="width: 25%; text-align: right">
+</td>
+<td style="width: 25%; text-align: left">
+</td>
+</tr>
+</table>
+</ContentTemplate>
+</ajaxToolkit:TabPanel>
+<ajaxToolkit:TabPanel ID="TabPanel2" runat="server" HeaderText="TabPanel2">
+<HeaderTemplate>
+Alpha Search
+</HeaderTemplate>
+<ContentTemplate>
+<table style="font-size: 8pt; font-family: Verdana" width="100%">
+                        <tr>
+                            <td style="width: 25%; text-align: center">
+                                <asp:RadioButton ID="RD_DraftNo" runat="server" GroupName="A" Text="Draft No" /></td>
+                            <td style="width: 25%; text-align: center">
+                                <asp:RadioButton ID="RD_PrincipleBankID" runat="server" GroupName="A" Text="Principle Bank ID" /></td>
+                            <td style="width: 25%; text-align: center">
+                                <asp:RadioButton ID="RD_CorrespondingBankID" runat="server" GroupName="A" Text="Corresponding Bank ID" /></td>
+                        </tr>
+                        <tr>
+                        </tr>
+                   </table>
+                    <uc1:AlphaSelection ID="AlphaSelection1" runat="server" />
+                </ContentTemplate>
+            </ajaxToolkit:TabPanel>
+        </ajaxToolkit:TabContainer>
+    <table width="100%">
+        <tr>
+            <td style="width: 240px">
+                <asp:Button ID="Button1" runat="server" Font-Bold="True" Font-Names="Verdana" Font-Size="10pt"
+                    OnClick="Button1_Click" Text="Search" />
+                <asp:Button ID="Button2" runat="server" Font-Bold="True" Font-Names="Verdana" Font-Size="10pt"
+                    OnClick="Button2_Click" Text="Clear" />
+                <asp:Button ID="TXT_NEW_USER" runat="server" Font-Bold="True" Font-Names="Verdana"
+                    Font-Size="10pt" OnClick="TXT_NEW_USER_Click" Text="New" /></td>
+        </tr>
+    </table>
+<asp:UpdatePanel id="UpdatePanel1" runat="server">
+<contenttemplate>
+<TABLE class="login" cellSpacing=0 width="100%"><TBODY><TR><TD><asp:Label style="FONT-WEIGHT: bold; FONT-SIZE: 9pt; FONT-FAMILY: Arial, Tahoma" id="LBL_GridStatus" runat="server" Width="100px"></asp:Label></TD><TD><asp:Label style="FONT-WEIGHT: bold; FONT-SIZE: 10pt; FONT-FAMILY: Arial, Tahoma" id="LBL_RowStatus" runat="server" Width="200px"></asp:Label></TD><TD width="100%"></TD><TD><asp:ImageButton id="CMD_MoveFirst" onclick="CMD_MoveFirst_Click" runat="server" ImageUrl="~/Images/MoveTop.gif"></asp:ImageButton></TD><TD><asp:ImageButton id="CMD_MoveBack" onclick="CMD_MoveBack_Click" runat="server" ImageUrl="~/Images/MovePrevious.gif"></asp:ImageButton></TD><TD><asp:DropDownList id="DRP_LIST" runat="server" OnSelectedIndexChanged="DRP_LIST_SelectedIndexChanged" AutoPostBack="True">
+</asp:DropDownList></TD><TD><asp:ImageButton id="CMD_MoveNext" onclick="CMD_MoveNext_Click" runat="server" ImageUrl="~/Images/MoveNext.gif"></asp:ImageButton></TD><TD><asp:ImageButton id="CMD_MoveLast" onclick="CMD_MoveLast_Click" runat="server" ImageUrl="~/Images/MoveLast.gif"></asp:ImageButton></TD></TR></TBODY></TABLE><TABLE style="BACKGROUND-COLOR: gainsboro" class="login" cellSpacing=0 width="100%"><TBODY><TR><TD style="FONT-SIZE: 9pt; COLOR: #444444; FONT-FAMILY: Arial, Tahoma; TEXT-ALIGN: left" colSpan=4></TD></TR></TBODY></TABLE>
+    <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True"
+        AutoGenerateColumns="False" DataKeyNames="ID" Font-Names="Verdana" Font-Size="8pt"
+        OnRowDataBound="GridView1_RowDataBound" OnSelectedIndexChanged="GridView1_SelectedIndexChanged"
+        PageSize="20" ShowFooter="True" Style="width: 100%" Width="100%" DataSourceID="SP_RPS_Draft_ALL">
+        <PagerSettings FirstPageImageUrl="~/Images/MoveTop.gif" FirstPageText="Move First"
+            LastPageImageUrl="~/Images/MoveLast.gif" LastPageText="Move Last" NextPageImageUrl="~/Images/MoveNext.gif"
+            NextPageText="Move Next" PageButtonCount="100" Position="TopAndBottom" PreviousPageImageUrl="~/Images/MovePrevious.gif"
+            PreviousPageText="Move Previous" />
+        <FooterStyle BorderStyle="Solid" BorderWidth="1px" />
+        <Columns>
+            <asp:BoundField DataField="ID" HeaderText="ID" SortExpression="ID" />
+            <asp:BoundField DataField="DraftAssignmentBatchID" HeaderText="DraftAssignmentBatchID" SortExpression="DraftAssignmentBatchID" />
+            <asp:BoundField DataField="DraftNo" HeaderText="Draft No" SortExpression="DraftNo" />
+            <asp:BoundField DataField="DraftDate" HeaderText="Draft Date" SortExpression="DraftDate" />
+            <asp:BoundField DataField="CurrencyID" HeaderText="Currency ID" SortExpression="CurrencyID" />
+            <asp:BoundField DataField="PrincipleBankID" HeaderText="Principle Bank ID" SortExpression="PrincipleBankID" />
+            <asp:BoundField DataField="CorrespondingBankID" HeaderText="Corresponding Bank ID" SortExpression="CorrespondingBankID" />
+            <asp:BoundField DataField="BranchID" HeaderText="Branch ID" SortExpression="BranchID" />
+            <asp:BoundField DataField="RemitterID" HeaderText="Remitter ID" SortExpression="RemitterID" />
+            <asp:BoundField DataField="BeneficiaryID" HeaderText="Beneficiary ID" SortExpression="BeneficiaryID" />
+            <asp:BoundField DataField="RemittanceID" HeaderText="Remittance ID" SortExpression="RemittanceID" />
+            <asp:BoundField DataField="DeliveryDate" HeaderText="Delivery Date" SortExpression="DeliveryDate" />
+            <asp:BoundField DataField="DraftTypeID" HeaderText="Draft Type ID" SortExpression="DraftTypeID" />
+            <asp:BoundField DataField="Rate" HeaderText="Rate" SortExpression="Rate" />
+            <asp:BoundField DataField="CoverAmountUSD" HeaderText="Cover Amount USD" SortExpression="CoverAmountUSD" />
+            <asp:BoundField DataField="TransactionAmount" HeaderText="Transaction Amount" SortExpression="TransactionAmount" />
+            <asp:BoundField DataField="ExciseDuty" HeaderText="Excise Duty" SortExpression="ExciseDuty" />
+            <asp:BoundField DataField="DraftAmount" HeaderText="Draft Amount" SortExpression="DraftAmount" />
+            <asp:BoundField DataField="RemitterMessage" HeaderText="Remitter Message" SortExpression="RemitterMessage" />
+            <asp:BoundField DataField="LanguageID" HeaderText="Language ID" SortExpression="LanguageID" />
+            <asp:BoundField DataField="StatusID" HeaderText="Status ID" SortExpression="StatusID" />
+            <asp:BoundField DataField="UpdateDate" HeaderText="Update Date" SortExpression="UpdateDate" />
+            <asp:BoundField DataField="RequestDate" HeaderText="Request Date" SortExpression="RequestDate" />
+            <asp:BoundField DataField="LiquidationDate" HeaderText="Liquidation Date" SortExpression="LiquidationDate" />
+            <asp:BoundField DataField="HoldReason" HeaderText="Hold Reason" SortExpression="HoldReason" />
+            <asp:BoundField DataField="StatusSwitch" HeaderText="Status Switch" SortExpression="StatusSwitch" />
+            <asp:BoundField DataField="A_UserID" HeaderText="Authorized By" SortExpression="A_UserID" />
+            <asp:BoundField DataField="A_DateTime" HeaderText="A_DateTime" SortExpression="A_DateTime" />
+            <asp:BoundField DataField="E_UserID" HeaderText="E_UserID" SortExpression="E_UserID" />
+            <asp:BoundField DataField="E_DateTime" HeaderText="E_DateTime" SortExpression="E_DateTime" />
+            <asp:TemplateField ShowHeader="False">
+                <ItemTemplate>
+                    <asp:ImageButton ID="ImageButton1" runat="server" CommandName="Select" ImageUrl="~/Images/edit1.gif"
+                        OnClick="ImageButton1_Click" />
+                </ItemTemplate>
+                <HeaderStyle HorizontalAlign="Right" />
+            </asp:TemplateField>
+        </Columns>
+        <PagerStyle BorderColor="#404040" BorderStyle="Solid" />
+    </asp:GridView>
+</contenttemplate>
+</asp:UpdatePanel>
+    <asp:ObjectDataSource ID="SP_RPS_Draft_ALL" runat="server" OldValuesParameterFormatString="original_{0}" SelectMethod="GetData" TypeName="InformationCollectionTableAdapters.SP_RPS_Draft_ALLTableAdapter" OnSelected=" SP_RPS_Draft_ALL_Selected">
+        <SelectParameters>
+            <asp:SessionParameter DefaultValue="%" Name="DraftNo" SessionField=RPS_Draft_DraftNo"
+                Type="String" />
+            <asp:SessionParameter DefaultValue="%" Name="PrincipleBankID" SessionField=RPS_Draft_PrincipleBankID"
+                Type="String" />
+            <asp:SessionParameter DefaultValue="%" Name="CorrespondingBankID" SessionField=RPS_Draft_CorrespondingBankID"
+                Type="String" />
+        </SelectParameters>
+    </asp:ObjectDataSource>
+ <eo:ToolBar ID="ToolBar1" runat="server" AutoPostBack="True" BackgroundImage="00100203"
+            BackgroundImageLeft="00100201" BackgroundImageRight="00100202" OnItemClick="ToolBar1_ItemClick"
+            SeparatorImage="00100204" Width="99.99%">
+            <DownStyle CssText="BORDER-RIGHT: #335ea8 1px solid; PADDING-RIGHT: 2px; BORDER-TOP: #335ea8 1px solid; PADDING-LEFT: 4px; FONT-SIZE: 12px; PADDING-BOTTOM: 1px; BORDER-LEFT: #335ea8 1px solid; CURSOR: hand; PADDING-TOP: 3px; BORDER-BOTTOM: #335ea8 1px solid; FONT-FAMILY: Tahoma; BACKGROUND-COLOR: #ffe1ac" />
+            <HoverStyle CssText="BORDER-RIGHT: #335ea8 1px solid; PADDING-RIGHT: 3px; BORDER-TOP: #335ea8 1px solid; PADDING-LEFT: 3px; FONT-SIZE: 12px; PADDING-BOTTOM: 2px; BORDER-LEFT: #335ea8 1px solid; CURSOR: hand; PADDING-TOP: 2px; BORDER-BOTTOM: #335ea8 1px solid; FONT-FAMILY: Tahoma; BACKGROUND-COLOR: #ffe1ac" />
+            <Items>
+                <eo:ToolBarItem CommandName="Cancel" Disabled="True" ImageUrl="00101001" ToolTip="Add New">
+                </eo:ToolBarItem>
+                <eo:ToolBarItem CommandName="Cancel" Disabled="True" ImageUrl="00101032" ToolTip="Search">
+                </eo:ToolBarItem>
+                <eo:ToolBarItem CommandName="Cancel" Disabled="True" ImageUrl="~/images/Refresh copy.gif"
+                    ToolTip="Refresh">
+                </eo:ToolBarItem>
+            </Items>
+            <ItemTemplates>
+                <eo:ToolBarItem Type="Custom">
+                    <NormalStyle CssText="background-color:transparent;border-bottom-style:none;border-left-style:none;border-right-style:none;border-top-style:none;padding-bottom:1px;padding-left:2px;padding-right:2px;padding-top:2px;" />
+                    <HoverStyle CssText="background-color:transparent;border-bottom-style:none;border-left-style:none;border-right-style:none;border-top-style:none;padding-bottom:1px;padding-left:2px;padding-right:2px;padding-top:2px;" />
+                    <DownStyle CssText="background-color:transparent;border-bottom-style:none;border-left-style:none;border-right-style:none;border-top-style:none;padding-bottom:1px;padding-left:2px;padding-right:2px;padding-top:2px;" />
+                </eo:ToolBarItem>
+                <eo:ToolBarItem Type="DropDownMenu">
+                    <NormalStyle CssText="background-image:url('00100205');background-position-x:right;border-bottom-style:none;border-left-style:none;border-right-style:none;border-top-style:none;cursor:hand;padding-bottom:3px;padding-left:4px;padding-right:4px;padding-top:3px;" />
+                    <HoverStyle CssText="background-color:#ffe1ac;background-image:url('00100206');background-position-x:right;border-bottom-color:#335ea8;border-bottom-style:solid;border-bottom-width:1px;border-left-color:#335ea8;border-left-style:solid;border-left-width:1px;border-right-color:#335ea8;border-right-style:solid;border-right-width:1px;border-top-color:#335ea8;border-top-style:solid;border-top-width:1px;cursor:hand;padding-bottom:2px;padding-left:3px;padding-right:3px;padding-top:2px;" />
+                    <DownStyle CssText="BORDER-RIGHT: #335ea8 1px solid; PADDING-RIGHT: 2px; BORDER-TOP: #335ea8 1px solid; PADDING-LEFT: 4px; BACKGROUND-POSITION-X: right; BACKGROUND-IMAGE: url(00100206); PADDING-BOTTOM: 1px; BORDER-LEFT: #335ea8 1px solid; CURSOR: hand; PADDING-TOP: 3px; BORDER-BOTTOM: #335ea8 1px solid; BACKGROUND-COLOR: #ffe1ac" />
+                </eo:ToolBarItem>
+            </ItemTemplates>
+            <NormalStyle CssText="PADDING-RIGHT: 4px; PADDING-LEFT: 4px; FONT-SIZE: 12px; PADDING-BOTTOM: 3px; CURSOR: hand; BORDER-TOP-STYLE: none; PADDING-TOP: 3px; FONT-FAMILY: Tahoma; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none" />
+        </eo:ToolBar>
+</asp:Content>

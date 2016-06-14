@@ -1,0 +1,587 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSources>
+    <DataSource Name="DummyDataSource">
+      <rd:DataSourceID>9660dea6-2ee7-4658-bb21-e02906ab0344</rd:DataSourceID>
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+    </DataSource>
+  </DataSources>
+  <InteractiveHeight>11in</InteractiveHeight>
+  <ReportParameters>
+    <ReportParameter Name="OrganizationName">
+      <DataType>String</DataType>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Report_Parameter_1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="ReportHeading">
+      <DataType>String</DataType>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Report_Parameter_0</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="Authorize1">
+      <DataType>String</DataType>
+      <Prompt>Report_Parameter_2</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="Authorize2">
+      <DataType>String</DataType>
+      <Prompt>Report_Parameter_3</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="IBC1">
+      <DataType>String</DataType>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Report_Parameter_4</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="IBC2">
+      <DataType>String</DataType>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Report_Parameter_5</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PayeesAccount">
+      <DataType>String</DataType>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Report_Parameter_6</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <rd:DrawGrid>true</rd:DrawGrid>
+  <InteractiveWidth>8.5in</InteractiveWidth>
+  <rd:SnapToGrid>true</rd:SnapToGrid>
+  <RightMargin>0.2in</RightMargin>
+  <LeftMargin>0.2in</LeftMargin>
+  <BottomMargin>0.2in</BottomMargin>
+  <rd:ReportID>2c8eec1b-507a-408e-b940-569b3873a17c</rd:ReportID>
+  <DataSets>
+    <DataSet Name="MCB_DataSet_DraftTransaction">
+      <Fields>
+        <Field Name="rowid">
+          <DataField>rowid</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="company_code">
+          <DataField>company_code</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="company_name">
+          <DataField>company_name</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="draftno">
+          <DataField>draftno</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="trans_type">
+          <DataField>trans_type</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="draftdate">
+          <DataField>draftdate</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="transfer_method">
+          <DataField>transfer_method</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="bene_name">
+          <DataField>bene_name</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="bene_address">
+          <DataField>bene_address</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ACCOUNTNO">
+          <DataField>ACCOUNTNO</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="NICNO">
+          <DataField>NICNO</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="rem_name">
+          <DataField>rem_name</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="STATUS">
+          <DataField>STATUS</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="remarks">
+          <DataField>remarks</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CUSTREFNUMBER">
+          <DataField>CUSTREFNUMBER</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="E_DATETIME">
+          <DataField>E_DATETIME</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PHONENO">
+          <DataField>PHONENO</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="correspondingbankid">
+          <DataField>correspondingbankid</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="branchid">
+          <DataField>branchid</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="bank_name">
+          <DataField>bank_name</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="branch_name">
+          <DataField>branch_name</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="auth_status">
+          <DataField>auth_status</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="amount">
+          <DataField>amount</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="amount_to_word">
+          <DataField>amount_to_word</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="d_DRAFTNO">
+          <DataField>d_DRAFTNO</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Column1">
+          <DataField>Column1</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="bank_add">
+          <DataField>bank_add</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="REFERENCE_1">
+          <DataField>REFERENCE#1</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="REFERENCE_2">
+          <DataField>REFERENCE#2</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="REFERENCE_3">
+          <DataField>REFERENCE#3</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="REFERENCE_4">
+          <DataField>REFERENCE#4</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="branch_name_add">
+          <DataField>branch_name_add</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SIGNATORY2image">
+          <DataField>SIGNATORY2image</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SIGNATORY1Image">
+          <DataField>SIGNATORY1Image</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SIGNATORY1Name">
+          <DataField>SIGNATORY1Name</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SIGNATORY2Name">
+          <DataField>SIGNATORY2Name</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DummyDataSource</DataSourceName>
+        <CommandText />
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+      <rd:DataSetInfo>
+        <rd:DataSetName>MCB_DataSet</rd:DataSetName>
+        <rd:TableName>DraftTransaction</rd:TableName>
+      </rd:DataSetInfo>
+    </DataSet>
+  </DataSets>
+  <DataTransform>AmountInWord</DataTransform>
+  <Code>Function BeneTopFun1(ByVal val As String) As String
+
+        If val.Length &gt;= 24 And val.IndexOf(" ") &gt; 0 Then
+            val = val.Substring(0, val.Substring(0, 24).LastIndexOf(" "))
+
+        ElseIf val.Length &gt;= 24 And val.IndexOf(" ") &lt; 0 Then
+            val = val.Substring(0, 24)
+        Else
+            Return val
+        End If
+        Return val
+
+    End Function
+
+Function BeneTopFun2(ByVal val As String) As String
+
+        If val.Length &gt;= 48 And val.IndexOf(" ") &gt; 0 Then
+            Dim i As Integer
+            i = val.Substring(0, val.Substring(0, 24).LastIndexOf(" ")).Length
+            val = val.Substring(i, val.Substring(i, 24).LastIndexOf(" "))
+            Return val
+        ElseIf val.Length &gt;= 48 And val.IndexOf(" ") &lt; 0 Then
+            Dim i As Integer
+            i = val.Substring(0, 24).Length
+            val = val.Substring(i, 24)
+            Return val
+        ElseIf val.Length &lt;= 48 And val.IndexOf(" ") &gt; 0 Then
+            If val.Length &gt;= 24 Then
+                Dim i As Integer
+                i = val.Substring(0, val.Substring(0, 24).LastIndexOf(" ")).Length
+                val = val.Substring(i)
+                Return val
+            Else
+                Return ""
+            End If
+        ElseIf val.Length &lt;= 48 And val.IndexOf(" ") &lt; 0 Then
+            If val.Length &gt;= 24 Then
+                Dim i As Integer
+                i = val.Substring(0, 24).Length
+                val = val.Substring(i)
+                Return val
+            Else
+                Return ""
+            End If
+        End If
+        Return val
+    End Function
+ Function BeneTopFun3(ByVal val As String) As String
+
+        If val.Length &gt;= 72 And val.IndexOf(" ") &gt; 0 Then
+            Dim i As Integer
+            i = val.Substring(0, val.Substring(0, 24).LastIndexOf(" ")).Length
+            i += val.Substring(i, val.Substring(i, 24).LastIndexOf(" ")).Length
+            val = val.Substring(i)
+            Return val
+        ElseIf val.Length &gt;= 72 And val.IndexOf(" ") &lt; 0 Then
+            Dim i As Integer
+            i = val.Substring(0, 24).Length
+            i += val.Substring(i, 24).Length
+            val = val.Substring(i)
+            Return val
+        ElseIf val.Length &lt;= 72 And val.IndexOf(" ") &gt; 0 Then
+            If val.Length &gt;= 48 Then
+                Dim i As Integer
+                i = val.Substring(0, val.Substring(0, 24).LastIndexOf(" ")).Length
+                i += val.Substring(i, val.Substring(i, 24).LastIndexOf(" ")).Length
+                val = val.Substring(i)
+                Return val
+            Else
+                Return ""
+            End If
+        ElseIf val.Length &lt;= 72 And val.IndexOf(" ") &lt; 0 Then
+            If val.Length &gt;= 48 Then
+                Dim i As Integer
+                i = val.Substring(0, 24).Length
+                i += val = val.Substring(i, 24).Length
+                val = val.Substring(i)
+                Return val
+            Else
+                Return ""
+            End If
+        End If
+        Return val
+    End Function
+
+
+Function BeneFav2(ByVal val As String) As String
+
+        If val.Length &gt;= 48 And val.IndexOf(" ") &gt; 0 Then
+            Dim i As Integer
+            i = val.Substring(0, val.Substring(0, 24).LastIndexOf(" ")).Length
+            val = val.Substring(i, val.Substring(i, 24).LastIndexOf(" "))
+            Return val
+        ElseIf val.Length &gt;= 48 And val.IndexOf(" ") &lt; 0 Then
+            Dim i As Integer
+            i = val.Substring(0, 24).Length
+            val = val.Substring(i, 24)
+            Return val
+        ElseIf val.Length &lt;= 48 And val.IndexOf(" ") &gt; 0 Then
+            If val.Length &gt;= 24 Then
+                Dim i As Integer
+                i = val.Substring(0, val.Substring(0, 24).LastIndexOf(" ")).Length
+                val = val.Substring(i)
+                Return val
+            Else
+                Return "-----------------"
+            End If
+        ElseIf val.Length &lt;= 48 And val.IndexOf(" ") &lt; 0 Then
+            If val.Length &gt;= 24 Then
+                Dim i As Integer
+                i = val.Substring(0, 24).Length
+                val = val.Substring(i)
+                Return val
+            Else
+                Return "-----------------"
+            End If
+        End If
+        Return val
+    End Function
+
+   Function AmtFun1(ByVal val As String) As String
+        If val.Length &gt;= 32 And val.IndexOf(" ") &gt; 0 Then
+            val = val.Substring(0, val.Substring(0, 32).LastIndexOf(" "))
+        Else
+            Return val
+        End If
+        Return val
+    End Function
+
+
+  Function AmtFun2(ByVal val As String) As String
+        If val.Length &gt;= 32 And val.IndexOf(" ") &gt; 0 Then
+            Dim i As Integer
+            i = val.Substring(0, val.Substring(0, 32).LastIndexOf(" ")).Length
+            val = val.Substring(i)
+        Else
+            Return ""
+        End If
+        Return val
+    End Function
+
+Function BeneBox(ByVal val As String) As String
+        If val.Length &gt;= 60 Then
+            Return val.Substring(0, 60)
+        Else
+            Return val
+        End If
+        Return val
+    End Function
+
+  Function Ref1(ByVal val As String) As String
+        If val &lt;&gt; "" Then
+            Return val &amp; "      " &amp; "Payable at any MCB branch"
+        Else
+            Return "--------------      Payable at any MCB branch"
+        End If
+    End Function
+
+Function Ref2(ByVal val As String, ByVal val2 As String) As String
+        If val &lt;&gt; "" And val2 &lt;&gt; "" Then
+            Return val &amp; "      " &amp; val2
+        ElseIf val = "" And val2 = "" Then
+            Return "--------------"
+        ElseIf val = "" And val2 &lt;&gt; "" Then
+            Return "--------------      " &amp; val2
+        ElseIf val &lt;&gt; "" And val2 = "" Then
+            Return val
+        End If
+    End Function
+
+Function BankAC3(ByVal val As String, ByVal val2 As String) As String
+
+        If val &lt;&gt; "" And val2 &lt;&gt; "" Then
+            If val.Length + val2.Length &gt;= 52 Then
+                If val.Length &gt; 0 Then
+                    val = "AC#" + val
+                Else
+                    val = ""
+                End If
+                If val2.Length &gt; 30 Then
+                    val += " " + val2.Substring(0, 30)
+                Else
+                    val += " " + val2
+                End If
+            Else
+                If val &lt;&gt; "" Then
+                    Return "AC#" + val + " " + val2
+                Else
+                    Return val2
+                End If
+            End If
+        ElseIf val &lt;&gt; "" And val2 = "" Then
+            Return "AC#" + val
+        ElseIf val = "" And val2 &lt;&gt; "" Then
+            If val2.Length &gt; 50 Then
+                Return val.Substring(0, 50)
+            Else
+                Return val
+            End If
+        Else
+            Return ""
+        End If
+        Return val
+    End Function
+
+   Function BranchFun1(ByVal val As String) As String
+        If val &lt;&gt; "" Then
+            If val.Length &gt;= 30 Then
+                Return val.Substring(0, 30)
+            Else
+                Return val
+            End If
+        Else
+            Return "--"
+        End If
+        Return val
+    End Function
+
+    Function BranchFun2(ByVal val As String) As String
+        If val &lt;&gt; "" Then
+            If val.Length &gt;= 60 Then
+                Dim i As Integer
+                i = val.Substring(0, 30).Length
+                Return val.Substring(i, 30)
+            Else
+                If val.Length &gt;= 30 Then
+                    Dim i As Integer
+                    i = val.Substring(0, 30).Length
+                   Dim a As Integer
+                    a = val.Length - 30
+                    Return val.Substring(i, a)
+                Else
+                    Return "--"
+                End If
+            End If
+        Else
+            Return "--"
+        End If
+        Return val
+    End Function
+
+Function BranchFun3(ByVal val As String) As String
+        If val &lt;&gt; "" Then
+            If val.Length &gt;= 70 Then
+
+                Dim i As Integer
+                i = val.Substring(0, 60).Length
+                Return val.Substring(i, 11)
+            Else
+                If val.Length &gt;= 60 Then
+                    Dim i As Integer
+                    i = val.Substring(0, 60).Length
+                    Dim a As Integer
+                    a = val.Length - 60
+                    Return val.Substring(i, a)
+                Else
+                    Return "--"
+                End If
+            End If
+        Else
+            Return "--"
+        End If
+        Return val
+    End Function
+
+Function BranchAdd1(ByVal val As String, ByVal val2 As String) As String
+        If val &lt;&gt; "" And val2 &lt;&gt; "" Then
+            val = "AC#" + val + " " + val2
+            If val.Length &gt; 52 Then
+                Return val.Substring(0, 52)
+            Else
+                Return val
+            End If
+        ElseIf val = "" And val2 &lt;&gt; "" Then
+            If val2.Length &gt; 52 Then
+                Return val2.Substring(0, 50)
+            Else
+                Return val2
+            End If
+        ElseIf val &lt;&gt; "" And val2 = "" Then
+            Return val
+        Else
+            Return "--"
+        End If
+        Return val
+    End Function
+
+
+Function BranchAdd2(ByVal val As String, ByVal val2 As String) As String
+        If val &lt;&gt; "" And val2 &lt;&gt; "" Then
+            val = "AC#" + val + " " + val2
+            If val.Length &gt; 52 Then
+                Dim a As Integer
+                a = val.Length - 52 + 1
+                Dim i As Integer
+                i = val.Substring(0, 52).Length
+
+                If a &gt; 60 Then
+                    Return val.Substring(i, 59)
+                Else
+                    Return val.Substring(i, a - 1)
+                End If
+            Else
+                Return "--"
+            End If
+        ElseIf val = "" And val2 &lt;&gt; "" Then
+            If val2.Length &gt; 52 Then
+                Dim a As Integer
+                a = val2.Length - 50
+                If a &gt; 59 Then
+                    Return val2.Substring(50, 59)
+                Else
+                    Return val2.Substring(50, a - 1)
+                End If
+            Else
+                Return "--"
+            End If
+
+        ElseIf val &lt;&gt; "" And val2 = "" Then
+            Return "--"
+        Else
+            Return "--"
+        End If
+        Return val
+    End Function
+ Function ComapnyName(ByVal val As String, ByVal val2 As String) As String
+        If val.Length &gt; 14 Then
+            Return val.Substring(0, 14) &amp; " " &amp; val2
+        Else
+            Return val &amp; " " &amp; val2
+        End If
+    End Function</Code>
+  <Width>8.27in</Width>
+  <Body>
+    <ReportItems>
+      <List Name="list1">
+        <Left>0.375in</Left>
+        <ReportItems>
+          <Textbox Name="textbox1">
+            <rd:DefaultName>textbox1</rd:DefaultName>
+            <Top>1in</Top>
+            <Width>1in</Width>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Left>1.5in</Left>
+            <Height>0.25in</Height>
+            <Value>=First(Fields!draftno.Value, "MCB_DataSet_DraftTransaction")</Value>
+          </Textbox>
+        </ReportItems>
+        <Top>0.125in</Top>
+        <Width>6.25in</Width>
+        <Grouping Name="list1_Details_Group">
+          <GroupExpressions>
+            <GroupExpression>=Fields!draftno.Value</GroupExpression>
+          </GroupExpressions>
+          <PageBreakAtEnd>true</PageBreakAtEnd>
+        </Grouping>
+        <Height>4.625in</Height>
+      </List>
+    </ReportItems>
+    <Height>10.75251in</Height>
+  </Body>
+  <AutoRefresh>300</AutoRefresh>
+  <Language>en-US</Language>
+  <DataElementName>AmountInWord</DataElementName>
+  <TopMargin>0.2in</TopMargin>
+  <PageHeight>7in</PageHeight>
+</Report>

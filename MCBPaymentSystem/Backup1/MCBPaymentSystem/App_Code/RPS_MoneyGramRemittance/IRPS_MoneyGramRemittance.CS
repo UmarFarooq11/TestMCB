@@ -1,0 +1,77 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+using System.Data;
+using System.Data.SqlClient;
+
+    interface IRPS_MoneyGramRemittance
+    {
+        void RecordInputStart();
+        void RecordInputCommit();
+        DataSet ReturnResultSet();
+        void ClearTable();
+
+        String Get_PrincipleBankID
+        { set;}
+        String Get_CoverAmountUSD
+        { set;}
+        String Get_TransactionAmount
+        { set;}
+        String Get_TransactionRefNo
+        { set;}
+        String Get_IncomingBeneficiaryID
+        { set;}
+        String Get_IncomingRemittanceID
+        { set;}
+        String Get_IncomingRemitterID
+        { set;}
+        String Get_IncomingBatchHeaderID
+        { set;}
+        String Get_RemitterID
+        { set;}
+        String Get_RemitterAccountNo
+        { set;}
+        String Get_FirstName
+        { set;}
+        String Get_MiddleName
+        { set;}
+        String Get_LastName
+        { set;}
+        String Get_TelephoneNo
+        { set;}
+        String Get_Country
+        { set;}
+        String Get_BeneficiaryFirstName
+        { set;}
+        String Get_BeneficiaryMiddleName
+        { set;}
+        String Get_BeneficiaryLastName
+        { set;}
+        String Get_Address1
+        { set;}
+        String Get_Address2
+        { set;}
+        String Get_AccountNo
+        { set;}
+        String Get_City
+        { set;}
+        String Get_BeneficiaryTelephoneNo
+        { set;}
+        String Get_NICNo
+        { set;}
+        String Get_A_UserID
+        { set;}
+        String Get_A_DateTime
+        { set;}
+        String Get_E_UserID
+        { set;}
+        String Get_E_DateTime
+        { set;}
+
+        String Get_IncomingBeneficiaryID1
+        { set;}
+        String Get_IncomingRemittanceID1
+        { set;}
+        String Get_IncomingRemitterID1
+        { set;}
+}

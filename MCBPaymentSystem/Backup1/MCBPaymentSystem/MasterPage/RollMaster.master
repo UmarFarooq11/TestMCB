@@ -1,0 +1,147 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="RollMaster.master.cs" Inherits="MasterPage_RollMaster" %>
+<%@ Register
+Assembly="AjaxControlToolkit"
+Namespace="AjaxControlToolkit"
+TagPrefix="ajaxToolkit" %>
+<%@ Register Src="../WebControls/SSO_Control.ascx" TagName="SSO_Control" TagPrefix="uc1" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>Main Page</title>    
+    <link href="../Blue.css" rel="stylesheet" type="text/css" /> 
+    </script>
+</head>
+
+<body style="BACKGROUND-COLOR: #f6f6f6">
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server">
+        </asp:ScriptManager>        
+        <asp:UpdatePanel ID="UpdatePanel5" runat="server" UpdateMode="Conditional">        
+            <ContentTemplate>
+                <table cellspacing="0" width="100%">
+                    <tr>
+                        <td colspan="3" style="height: 1px">
+        <table cellspacing="0" width="100%">
+            <tr>
+                <td style="background-attachment: fixed;
+                    background-repeat: repeat-x; text-align: right">
+                    &nbsp;<asp:Label ID="Label1" runat="server" Font-Bold="True" Style="font-size: 8pt;
+                        font-family: Arial, Tahoma"></asp:Label><asp:LinkButton ID="LinkButton1" runat="server"
+                            CausesValidation="False" Font-Bold="True" OnClick="LinkButton1_Click1" Style="font-size: 8pt;
+                            font-family: Arial, Tahoma">MCB-PS Log Out</asp:LinkButton></td>
+            </tr>
+            <tr>
+                <td style="background-attachment: fixed; background-repeat: no-repeat">
+                    <table cellspacing="0" width="100%">
+                        <tr>
+                            <td style="width: 39%">
+                                <asp:Image ID="Image1" runat="server" ImageUrl="~/images/NEW LOG copy.JPG" /></td>
+                            <td style="width: 40%; text-align: center;">
+                                <asp:UpdateProgress ID="UpdateProgress1" runat="server" DisplayAfter="1">
+                                    <ProgressTemplate>
+                                        <img src="../images/sp-progress2.gif" />
+                                    </ProgressTemplate>
+                                </asp:UpdateProgress>
+                            </td>
+                            <td style="width: 30%; text-align: right">
+                                <asp:Image ID="Image2" runat="server" ImageUrl="~/images/SAM_LOGO/LOGO1 copy.jpg" /></td>
+                            <td style="width: 3px">
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+                        </td>
+                    </tr>
+                </table>
+        <table cellspacing="0" class="masterbar" width="100%">
+            <tr>
+                <td style="height: 5px">
+                </td>
+            </tr>
+        </table>
+        <table width="100%" cellspacing="0" style="background-image: url(../images/blue/bgBlueForm.gif); background-repeat: repeat-x; background-color: #f6f6f6">
+            <tr>
+                <td style="width: 0%; vertical-align: top; background-repeat: repeat-x; background-color: transparent;"><asp:UpdatePanel ID="UpdatePanel2" runat="server">
+                    <ContentTemplate>
+                    <asp:Panel ID="Panel1" runat="server" BackColor="Transparent" Width="1px">
+                        <uc1:sso_control id="SSO_Control1" runat="server" OnLoad="SSO_Control1_Load"></uc1:sso_control>
+                    </asp:Panel>
+        <ajaxtoolkit:collapsiblepanelextender id="CollapsiblePanelExtender1" runat="server"
+            collapsecontrolid="ImageButton1" collapsed="True" collapsedimage="~/images/btn-o.png"
+            collapsedsize="0" expandcontrolid="ImageButton1" expanddirection="Horizontal"
+            expandedimage="~/images/btn-c.png" expandedsize="350" suppresspostback="True"
+            targetcontrolid="Panel1" ImageControlID="ImageButton1"></ajaxtoolkit:collapsiblepanelextender>
+                    </ContentTemplate>
+                </asp:UpdatePanel>
+                </td>
+                
+                <td style="vertical-align: top; width: 0%; background-color: #f6f6f6; border-left: blue 1px solid;">
+                    <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/images/btn-o.png" />                    
+                </td>
+                <td style="width: 100%">
+                    <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                        <ContentTemplate>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>                    
+                            <iframe id="I1" runat="server" frameborder="0" height="1500" src="" width="100%" class="mbar">
+                            </iframe>
+                        </ContentTemplate>
+                    </asp:UpdatePanel>
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                </td>
+            </tr>
+        </table>
+        <hr color="darkgray" />
+        <table cellspacing="0" width="100%">
+            <tr>
+                <td style="font-weight: bold; font-size: 9pt; color: #444444; font-family: Arial, Tahoma;
+                    text-align: center">
+                    For any clarification/Information related to the Transaction Banking,
+                    <br />
+                    please call our help desk on following numbers
+                    <br />
+                    Call: + MCB Help Desk </td>
+            </tr>
+            <tr>
+                <td style="font-weight: bold; font-size: 9pt; color: #444444; font-family: Arial, Tahoma;
+                    text-align: center">
+                </td>
+            </tr>
+        </table>
+        <asp:HyperLink ID="HyperLink1" runat="server" ImageUrl="~/images/Main_08.png" NavigateUrl="http://www.cr-pl.com">HyperLink</asp:HyperLink><br />
+        <!-- Create Menu Settings: (Menu ID, Is Vertical, Show Timer, Hide Timer, On Click (options: 'all' * 'all-always-open' * 'main' * 'lev2'), Right to Left, Horizontal Subs, Flush Left, Flush Top) -->                
+            </ContentTemplate>
+          </asp:UpdatePanel>        
+    </form>
+</body>
+</html>

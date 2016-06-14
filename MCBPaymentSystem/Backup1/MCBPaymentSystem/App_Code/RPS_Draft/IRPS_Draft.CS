@@ -1,0 +1,73 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+using System.Data;
+using System.Data.SqlClient;
+
+    interface IRPS_Draft
+    {
+        void RecordInputStart();
+        void RecordInputCommit();
+        DataSet ReturnResultSet();
+        void ClearTable();
+      String Get_A_DateTime
+		{ set;}
+      String Get_A_UserID
+		{ set;}
+      String Get_BeneficiaryID
+		{ set;}
+      String Get_BranchID
+		{ set;}
+      String Get_CorrespondingBankID
+		{ set;}
+      String Get_CoverAmountUSD
+		{ set;}
+      String Get_CurrencyID
+		{ set;}
+      String Get_DeliveryDate
+		{ set;}
+      String Get_DraftAmount
+		{ set;}
+      String Get_DraftAssignmentBatchID
+		{ set;}
+      String Get_DraftDate
+		{ set;}
+      String Get_DraftNo
+		{ set;}
+      String Get_DraftTypeID
+		{ set;}
+      String Get_E_DateTime
+		{ set;}
+      String Get_E_UserID
+		{ set;}
+      String Get_ExciseDuty
+		{ set;}
+      String Get_HoldReason
+		{ set;}
+      String Get_ID
+		{ set;}
+      String Get_LanguageID
+		{ set;}
+      String Get_LiquidationDate
+		{ set;}
+      String Get_PrincipleBankID
+		{ set;}
+      String Get_Rate
+		{ set;}
+      String Get_RemittanceID
+		{ set;}
+      String Get_RemitterID
+		{ set;}
+      String Get_RemitterMessage
+		{ set;}
+      String Get_RequestDate
+		{ set;}
+      String Get_StatusID
+		{ set;}
+      String Get_StatusSwitch
+		{ set;}
+      String Get_TransactionAmount
+		{ set;}
+      String Get_UpdateDate
+		{ set;}
+      }

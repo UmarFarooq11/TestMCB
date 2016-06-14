@@ -1,0 +1,784 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSources>
+    <DataSource Name="DummyDataSource">
+      <rd:DataSourceID>9660dea6-2ee7-4658-bb21-e02906ab0344</rd:DataSourceID>
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+    </DataSource>
+  </DataSources>
+  <InteractiveHeight>11in</InteractiveHeight>
+  <ReportParameters>
+    <ReportParameter Name="OrganizationName">
+      <DataType>String</DataType>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Report_Parameter_1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="ReportHeading">
+      <DataType>String</DataType>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Report_Parameter_0</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="Authorize1">
+      <DataType>String</DataType>
+      <Prompt>Report_Parameter_2</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="Authorize2">
+      <DataType>String</DataType>
+      <Prompt>Report_Parameter_3</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="IBC1">
+      <DataType>String</DataType>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Report_Parameter_4</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="IBC2">
+      <DataType>String</DataType>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Report_Parameter_5</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <rd:DrawGrid>false</rd:DrawGrid>
+  <InteractiveWidth>8.5in</InteractiveWidth>
+  <rd:SnapToGrid>false</rd:SnapToGrid>
+  <RightMargin>0.0008in</RightMargin>
+  <LeftMargin>0.0008in</LeftMargin>
+  <BottomMargin>0.0008in</BottomMargin>
+  <rd:ReportID>2c8eec1b-507a-408e-b940-569b3873a17c</rd:ReportID>
+  <PageWidth>8in</PageWidth>
+  <DataSets>
+    <DataSet Name="MCB_DataSet_DraftTransaction">
+      <Fields>
+        <Field Name="rowid">
+          <DataField>rowid</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="company_code">
+          <DataField>company_code</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="company_name">
+          <DataField>company_name</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="draftno">
+          <DataField>draftno</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="trans_type">
+          <DataField>trans_type</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="draftdate">
+          <DataField>draftdate</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="transfer_method">
+          <DataField>transfer_method</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="bene_name">
+          <DataField>bene_name</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="bene_address">
+          <DataField>bene_address</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ACCOUNTNO">
+          <DataField>ACCOUNTNO</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="NICNO">
+          <DataField>NICNO</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="rem_name">
+          <DataField>rem_name</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="STATUS">
+          <DataField>STATUS</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="remarks">
+          <DataField>remarks</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CUSTREFNUMBER">
+          <DataField>CUSTREFNUMBER</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="E_DATETIME">
+          <DataField>E_DATETIME</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PHONENO">
+          <DataField>PHONENO</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="correspondingbankid">
+          <DataField>correspondingbankid</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="branchid">
+          <DataField>branchid</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="bank_name">
+          <DataField>bank_name</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="branch_name">
+          <DataField>branch_name</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="auth_status">
+          <DataField>auth_status</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="amount">
+          <DataField>amount</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="amount_to_word">
+          <DataField>amount_to_word</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="d_DRAFTNO">
+          <DataField>d_DRAFTNO</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Column1">
+          <DataField>Column1</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="bank_add">
+          <DataField>bank_add</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DummyDataSource</DataSourceName>
+        <CommandText />
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+      <rd:DataSetInfo>
+        <rd:DataSetName>MCB_DataSet</rd:DataSetName>
+        <rd:TableName>DraftTransaction</rd:TableName>
+      </rd:DataSetInfo>
+    </DataSet>
+  </DataSets>
+  <DataTransform>AmountInWord</DataTransform>
+  <Code>Function AmtFun1(ByVal val As String) As String
+        If val.Length &gt;= 52 And val.IndexOf(" ") &gt; 0 Then
+            val = val.Substring(0, val.Substring(0, 52).LastIndexOf(" "))
+        Else
+            Return val
+        End If
+        Return val
+    End Function
+
+    Function AmtFun2(ByVal val As String) As String
+        If val.Length &gt;= 52 And val.IndexOf(" ") &gt; 0 Then
+            Dim i As Integer
+            i = val.Substring(0, val.Substring(0, 52).LastIndexOf(" ")).Length
+            val = val.Substring(i)
+        Else
+            Return " "
+        End If
+        Return val
+    End Function</Code>
+  <Width>7.93751in</Width>
+  <Body>
+    <ReportItems>
+      <List Name="list1">
+        <DataSetName>MCB_DataSet_DraftTransaction</DataSetName>
+        <ReportItems>
+          <Textbox Name="textbox21">
+            <Top>7.39583in</Top>
+            <Width>1.97918in</Width>
+            <Style>
+              <FontFamily>Courier New</FontFamily>
+              <FontWeight>700</FontWeight>
+              <TextAlign>Right</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>31</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>5in</Left>
+            <Height>0.22916in</Height>
+            <Value>=Fields!draftdate.Value</Value>
+          </Textbox>
+          <Textbox Name="textbox20">
+            <Top>4.10417in</Top>
+            <Width>1.97918in</Width>
+            <Style>
+              <FontFamily>Courier New</FontFamily>
+              <FontWeight>700</FontWeight>
+              <TextAlign>Right</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>30</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>4.625in</Left>
+            <Height>0.27083in</Height>
+            <Value>=Fields!draftdate.Value</Value>
+          </Textbox>
+          <Textbox Name="textbox9">
+            <Top>8.26042in</Top>
+            <Width>2.60418in</Width>
+            <Style>
+              <FontFamily>Courier New</FontFamily>
+              <FontWeight>700</FontWeight>
+              <TextAlign>Right</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>60pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>29</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>5.24478in</Left>
+            <Height>0.25in</Height>
+            <Value>=Fields!amount.Value</Value>
+          </Textbox>
+          <Textbox Name="textbox10">
+            <Top>8.32292in</Top>
+            <Width>3.61459in</Width>
+            <Style>
+              <FontFamily>Courier New</FontFamily>
+              <FontWeight>700</FontWeight>
+              <TextAlign>Left</TextAlign>
+              <PaddingLeft>32pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>28</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>0.5in</Left>
+            <Height>0.15626in</Height>
+            <Value>=Fields!bank_add.Value</Value>
+          </Textbox>
+          <Textbox Name="textbox11">
+            <Top>8.07292in</Top>
+            <Width>3.61459in</Width>
+            <Style>
+              <FontFamily>Courier New</FontFamily>
+              <FontWeight>700</FontWeight>
+              <TextAlign>Left</TextAlign>
+              <PaddingLeft>32pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>27</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>0.5in</Left>
+            <Height>0.15626in</Height>
+            <Value>=Fields!bank_name.Value</Value>
+          </Textbox>
+          <Textbox Name="textbox12">
+            <Top>7.82292in</Top>
+            <Width>3.61459in</Width>
+            <Style>
+              <FontFamily>Courier New</FontFamily>
+              <FontWeight>700</FontWeight>
+              <TextAlign>Left</TextAlign>
+              <PaddingLeft>32pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>26</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>0.5in</Left>
+            <Height>0.15626in</Height>
+            <Value>="AC#" &amp; Fields!ACCOUNTNO.Value</Value>
+          </Textbox>
+          <Textbox Name="textbox13">
+            <Top>7.58334in</Top>
+            <Width>3.61459in</Width>
+            <Style>
+              <FontFamily>Courier New</FontFamily>
+              <FontWeight>700</FontWeight>
+              <TextAlign>Left</TextAlign>
+              <PaddingLeft>32pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>25</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>0.5in</Left>
+            <Height>0.15626in</Height>
+            <Value>=Fields!bene_name.Value</Value>
+          </Textbox>
+          <Textbox Name="textbox15">
+            <Top>7.69792in</Top>
+            <Width>2.7396in</Width>
+            <Style>
+              <FontFamily>Courier New</FontFamily>
+              <FontWeight>700</FontWeight>
+              <TextAlign>Right</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>60pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>24</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>5in</Left>
+            <Height>0.27083in</Height>
+            <Value>=Fields!rem_name.Value</Value>
+          </Textbox>
+          <Textbox Name="textbox17">
+            <Top>6.89583in</Top>
+            <Width>1.45835in</Width>
+            <Style>
+              <FontFamily>Courier New</FontFamily>
+              <FontWeight>700</FontWeight>
+              <TextAlign>Right</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>23</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>6.25in</Left>
+            <Height>0.25in</Height>
+            <Value>=Fields!draftdate.Value</Value>
+          </Textbox>
+          <Textbox Name="textbox19">
+            <Top>6.89583in</Top>
+            <Width>1.44794in</Width>
+            <Style>
+              <FontFamily>Courier New</FontFamily>
+              <FontWeight>700</FontWeight>
+              <TextAlign>Right</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>22</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>4.625in</Left>
+            <Height>0.25in</Height>
+            <Value>=Fields!draftno.Value</Value>
+          </Textbox>
+          <Textbox Name="textbox18">
+            <Top>5.10417in</Top>
+            <Width>2.7396in</Width>
+            <Style>
+              <FontFamily>Courier New</FontFamily>
+              <FontWeight>700</FontWeight>
+              <TextAlign>Right</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>60pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>21</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>5.125in</Left>
+            <Height>0.25in</Height>
+            <Value>=Fields!amount.Value</Value>
+          </Textbox>
+          <Textbox Name="textbox135">
+            <Top>5in</Top>
+            <Width>3.61459in</Width>
+            <Style>
+              <FontFamily>Courier New</FontFamily>
+              <FontWeight>700</FontWeight>
+              <TextAlign>Left</TextAlign>
+              <PaddingLeft>32pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>20</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>0.625in</Left>
+            <Height>0.15626in</Height>
+            <Value>=Fields!bank_add.Value</Value>
+          </Textbox>
+          <Textbox Name="textbox133">
+            <Top>4.75in</Top>
+            <Width>3.61459in</Width>
+            <Style>
+              <FontFamily>Courier New</FontFamily>
+              <FontWeight>700</FontWeight>
+              <TextAlign>Left</TextAlign>
+              <PaddingLeft>32pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>19</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>0.625in</Left>
+            <Height>0.15626in</Height>
+            <Value>=Fields!bank_name.Value</Value>
+          </Textbox>
+          <Textbox Name="textbox6">
+            <Top>4.5in</Top>
+            <Width>3.61459in</Width>
+            <Style>
+              <FontFamily>Courier New</FontFamily>
+              <FontWeight>700</FontWeight>
+              <TextAlign>Left</TextAlign>
+              <PaddingLeft>32pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>18</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>0.625in</Left>
+            <Height>0.15626in</Height>
+            <Value>="AC#" &amp; Fields!ACCOUNTNO.Value</Value>
+          </Textbox>
+          <Textbox Name="textbox147">
+            <Top>4.26042in</Top>
+            <Width>3.61459in</Width>
+            <Style>
+              <FontFamily>Courier New</FontFamily>
+              <FontWeight>700</FontWeight>
+              <TextAlign>Left</TextAlign>
+              <PaddingLeft>32pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>17</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>0.625in</Left>
+            <Height>0.15626in</Height>
+            <Value>=Fields!bene_name.Value</Value>
+          </Textbox>
+          <Textbox Name="textbox4">
+            <Top>4.45834in</Top>
+            <Width>2.7396in</Width>
+            <Style>
+              <FontFamily>Courier New</FontFamily>
+              <FontWeight>700</FontWeight>
+              <TextAlign>Right</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>60pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>16</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>4.625in</Left>
+            <Height>0.27083in</Height>
+            <Value>=Fields!rem_name.Value</Value>
+          </Textbox>
+          <Textbox Name="textbox3">
+            <Top>3.61458in</Top>
+            <Width>1.47918in</Width>
+            <Style>
+              <FontFamily>Courier New</FontFamily>
+              <FontWeight>700</FontWeight>
+              <TextAlign>Right</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>15</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>6.375in</Left>
+            <Height>0.25in</Height>
+            <Value>=Fields!draftdate.Value</Value>
+          </Textbox>
+          <Textbox Name="textbox112">
+            <Top>3.61458in</Top>
+            <Width>1.58336in</Width>
+            <Style>
+              <FontFamily>Courier New</FontFamily>
+              <FontWeight>700</FontWeight>
+              <TextAlign>Right</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>14</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>4.40625in</Left>
+            <Height>0.25in</Height>
+            <Value>=Fields!draftno.Value</Value>
+          </Textbox>
+          <Textbox Name="textbox23">
+            <Top>1.30208in</Top>
+            <Width>4.01042in</Width>
+            <Style>
+              <FontFamily>Courier New</FontFamily>
+              <FontWeight>700</FontWeight>
+              <TextAlign>Left</TextAlign>
+              <PaddingLeft>18pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingBottom>8pt</PaddingBottom>
+            </Style>
+            <ZIndex>13</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>0.98958in</Left>
+            <Height>0.21875in</Height>
+            <Value>=Code.AmtFun2(Fields!amount_to_word.Value)</Value>
+          </Textbox>
+          <Textbox Name="textbox5">
+            <Top>0.96354in</Top>
+            <Width>4.01042in</Width>
+            <Style>
+              <FontFamily>Courier New</FontFamily>
+              <FontWeight>700</FontWeight>
+              <TextAlign>Left</TextAlign>
+              <PaddingLeft>18pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>8pt</PaddingBottom>
+            </Style>
+            <ZIndex>12</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>0.98958in</Left>
+            <Height>0.22917in</Height>
+            <Value>=Code.AmtFun1(Fields!amount_to_word.Value)</Value>
+          </Textbox>
+          <Textbox Name="textbox16">
+            <Top>0.58854in</Top>
+            <Width>4.01042in</Width>
+            <Style>
+              <FontFamily>Courier New</FontFamily>
+              <FontWeight>700</FontWeight>
+              <TextAlign>Left</TextAlign>
+              <PaddingLeft>18pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>6pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>11</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>0.98958in</Left>
+            <Height>0.25in</Height>
+            <Value>=Fields!bene_name.Value</Value>
+          </Textbox>
+          <Textbox Name="textbox8">
+            <rd:DefaultName>textbox8</rd:DefaultName>
+            <Top>1.78125in</Top>
+            <Width>1.20001in</Width>
+            <Style>
+              <FontSize>7pt</FontSize>
+              <FontWeight>700</FontWeight>
+              <TextAlign>Right</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>10</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>6.65in</Left>
+            <Height>0.18in</Height>
+            <Value>=Parameters!Authorize2.Value &amp;" "&amp;Parameters!IBC2.Value</Value>
+          </Textbox>
+          <Textbox Name="textbox7">
+            <rd:DefaultName>textbox7</rd:DefaultName>
+            <Top>1.78125in</Top>
+            <Width>1.20001in</Width>
+            <Style>
+              <FontSize>7pt</FontSize>
+              <FontWeight>700</FontWeight>
+              <TextAlign>Right</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>9</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>5.4in</Left>
+            <Height>0.18in</Height>
+            <Value>=Parameters!Authorize1.Value &amp;" "&amp;Parameters!IBC1.Value</Value>
+          </Textbox>
+          <Textbox Name="textbox2">
+            <Top>0.95833in</Top>
+            <Width>1.38543in</Width>
+            <Style>
+              <FontFamily>Courier New</FontFamily>
+              <FontWeight>700</FontWeight>
+              <TextAlign>Left</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>8</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>6.21875in</Left>
+            <Height>0.15625in</Height>
+            <Value>=Fields!amount.Value</Value>
+          </Textbox>
+          <Textbox Name="textbox24">
+            <Top>0.41667in</Top>
+            <Width>0.13125in</Width>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>7</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>7.72917in</Left>
+            <Height>0.25in</Height>
+            <Value>=Mid(Fields!draftdate.Value,10,1)</Value>
+          </Textbox>
+          <Textbox Name="textbox25">
+            <Top>0.41667in</Top>
+            <Width>0.15in</Width>
+            <Style>
+              <FontWeight>700</FontWeight>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>6</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>7.45919in</Left>
+            <Height>0.25in</Height>
+            <Value>=Mid(Fields!draftdate.Value,9,1)</Value>
+          </Textbox>
+          <Textbox Name="textbox28">
+            <Top>0.41667in</Top>
+            <Width>0.20119in</Width>
+            <Style>
+              <FontWeight>700</FontWeight>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>5</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>7.11948in</Left>
+            <Height>0.25in</Height>
+            <Value>=Mid(Fields!draftdate.Value,5,1)</Value>
+          </Textbox>
+          <Textbox Name="textbox29">
+            <Top>0.41667in</Top>
+            <Width>0.17649in</Width>
+            <Style>
+              <FontWeight>700</FontWeight>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>4</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>6.82301in</Left>
+            <Height>0.25in</Height>
+            <Value>=Mid(Fields!draftdate.Value,4,1)</Value>
+          </Textbox>
+          <Textbox Name="textbox30">
+            <Top>0.41667in</Top>
+            <Width>0.18095in</Width>
+            <Style>
+              <FontWeight>700</FontWeight>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>3</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>6.55332in</Left>
+            <Height>0.25in</Height>
+            <Value>=Mid(Fields!draftdate.Value,2,1)</Value>
+          </Textbox>
+          <Textbox Name="textbox31">
+            <Top>0.41667in</Top>
+            <Width>0.17708in</Width>
+            <Style>
+              <FontWeight>700</FontWeight>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>2</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>6.22501in</Left>
+            <Height>0.25in</Height>
+            <Value>=Mid(Fields!draftdate.Value,1,1)</Value>
+          </Textbox>
+          <Textbox Name="textbox1">
+            <Top>0.16667in</Top>
+            <Style>
+              <FontFamily>Courier New</FontFamily>
+              <FontWeight>700</FontWeight>
+              <TextAlign>Left</TextAlign>
+            </Style>
+            <ZIndex>1</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>6.92708in</Left>
+            <Height>0.11458in</Height>
+            <Value>=Fields!draftno.Value</Value>
+          </Textbox>
+          <Textbox Name="textbox14">
+            <Style>
+              <FontFamily>Courier New</FontFamily>
+              <FontWeight>700</FontWeight>
+              <TextAlign>Left</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Left>6.92708in</Left>
+            <Height>0.11458in</Height>
+            <Value>=Fields!draftno.Value</Value>
+          </Textbox>
+        </ReportItems>
+        <Filters>
+          <Filter>
+            <FilterExpression />
+            <Operator>Equal</Operator>
+            <FilterValues>
+              <FilterValue />
+            </FilterValues>
+          </Filter>
+        </Filters>
+        <Style>
+          <FontWeight>700</FontWeight>
+        </Style>
+        <Grouping Name="list1_Details_Group">
+          <GroupExpressions>
+            <GroupExpression>=Fields!draftno.Value</GroupExpression>
+          </GroupExpressions>
+          <PageBreakAtEnd>true</PageBreakAtEnd>
+        </Grouping>
+        <PageBreakAtStart>true</PageBreakAtStart>
+      </List>
+    </ReportItems>
+    <Height>9.9375in</Height>
+  </Body>
+  <AutoRefresh>300</AutoRefresh>
+  <Language>en-US</Language>
+  <DataElementName>AmountInWord</DataElementName>
+  <TopMargin>0.0008in</TopMargin>
+</Report>

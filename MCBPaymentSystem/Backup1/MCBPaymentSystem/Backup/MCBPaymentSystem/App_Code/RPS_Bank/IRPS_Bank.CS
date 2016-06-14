@@ -1,0 +1,69 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+using System.Data;
+using System.Data.SqlClient;
+
+interface IRPS_Bank
+{
+    void RecordInputStart();
+    void RecordInputCommit();
+    DataSet ReturnResultSet();
+    void ClearTable();
+    String Get_A_DateTime
+    { set;}
+    String Get_A_UserID
+    { set;}
+    String Get_Abbreviation
+    { set;}
+    String Get_AccountNo
+    { set;}
+    String Get_Address
+    { set;}
+    String Get_AssignedCitiBankId
+    { set;}
+    String Get_BankCode
+    { set;}
+    String Get_BankName
+    { set;}
+    String Get_CustomerType
+    { set;}
+    String Get_DraftFooterMessage
+    { set;}
+    String Get_E_DateTime
+    { set;}
+    String Get_E_UserID
+    { set;}
+    String Get_Email
+    { set;}
+    String Get_FaxNo
+    { set;}
+    String Get_FloorLimit
+    { set;}
+    String Get_ID
+    { set;}
+    String Get_InputFileAllowed
+    { set;}
+    String Get_IsCitiBank
+    { set;}
+    String Get_IsDollarBased
+    { set;}
+    String Get_IsPRI
+    { set;}
+    String Get_OfflineDraftStartingNo
+    { set;}
+    String Get_OnlineDraftStartingNo
+    { set;}
+    String Get_PhoneNo
+    { set;}
+    String Get_RemitType
+    { set;}
+    String Get_ReportTitle
+    { set;}
+    String Get_ServiceTypeID
+    { set;}
+    String Get_UnclaimedDraftPeriod
+    { set;}
+    String Get_URL
+    { set;}
+}

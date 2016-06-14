@@ -1,0 +1,186 @@
+﻿body, div, p, h1, h2, h3, h4, ul, li, table
+{
+	margin:0;
+	padding:0;
+	border:none;
+}
+
+
+
+table.masterbar
+{
+ border-top: #94C1E8 thin solid; 
+ border-bottom: #0046AD thin solid; 
+ background-repeat: repeat-x;
+ background-image: url(images/BrandSr/green_bar.jpg); 
+ font-size: 5pt;
+} 
+
+
+table.login
+{
+ border-top: #0046AD thin solid; 
+ border-bottom: #94C1E8 thin solid; 
+ background-repeat: repeat-x; 
+} 
+
+
+
+td.GridBar
+{
+ border-top: #0046AD thin solid; 
+ border-bottom: #94C1E8 thin solid;  
+} 
+
+
+td.GridBarTop
+{
+ border-bottom: #94C1E8 thin solid;   
+} 
+
+
+table.air1
+{   
+ background-repeat: repeat-x;
+ background-image: url(images/Green/bgGreenForm.gif); 
+ FONT-FAMILY: Arial, Tahoma; 
+ font-size:8pt;  
+}
+
+
+
+
+
+table.air 
+{   
+ background-repeat: repeat-x; 
+ FONT-FAMILY: Arial, Tahoma; 
+ font-size:8pt;  
+}
+
+td.TableColumns
+{
+ FONT-WEIGHT: bold; 
+ WIDTH: 20%;  
+ TEXT-ALIGN: right; 
+ FONT-FAMILY: Arial, Tahoma; 
+ font-size:8pt;
+ background-color: #E1F3E0;
+ /*background-color:#C3D1EB; */
+}
+
+
+
+
+
+
+td.TableColumns1
+{
+ FONT-WEIGHT: bold; 
+ WIDTH: 20%;  
+ TEXT-ALIGN: right; 
+ FONT-FAMILY: Arial, Tahoma; 
+ font-size:8pt;
+ background-color:#C3D1EB; 
+}
+
+
+
+
+td.ColLines
+{
+ FONT-FAMILY: Arial, Tahoma; 
+ font-size:8pt;
+ /*border-bottom: #C3D1EB 1px solid;*/
+ border-bottom: #E1F3E0 1px solid;
+}
+
+
+TABLE#panel
+{
+	border-right: #695EF7 1px solid; 
+	border-top: #695EF7 1px solid; 
+	border-left: #695EF7 1px solid; 
+	border-bottom: #695EF7 1px solid;
+}
+
+td#panel_TD
+{
+ border-right: #695EF7 1px solid; 
+ border-top: #695EF7 1px solid; 
+ border-left: #695EF7 1px solid; 
+ border-bottom: #695EF7 1px solid
+}
+
+td#panel_TD_part1
+{ 
+ border-top: #695EF7 1px solid; 
+ border-left: #695EF7 1px solid; 
+ border-bottom: #695EF7 1px solid
+}
+
+td#panel_TD_part2
+{ 
+ border-top: #695EF7 1px solid; 
+ border-right: #695EF7 1px solid; 
+ border-bottom: #695EF7 1px solid
+}
+
+
+td#panel_TD_part3
+{ 
+ border-top: #695EF7 1px solid;  
+ border-bottom: #695EF7 1px solid
+}
+
+
+/* default layout */
+.ajax__tab_default .ajax__tab_header {white-space:nowrap;}
+.ajax__tab_default .ajax__tab_outer {display:-moz-inline-box;display:inline-block}
+.ajax__tab_default .ajax__tab_inner {display:-moz-inline-box;display:inline-block}
+.ajax__tab_default .ajax__tab_tab 
+{
+	margin-right:4px;
+	overflow:hidden;
+	text-align:center;
+	cursor:pointer;
+	display:-moz-inline-box;
+	display:inline-block
+}
+
+
+/* xp theme */
+.ajax__tab_xp1 .ajax__tab_header 
+{
+	font-family:verdana,tahoma,helvetica;
+	font-size:11px;
+	background: url(images/TAB/tab-liner.gif) repeat-x bottom;   /*url(images/TAB/tab-line.gif) repeat-x bottom;*/
+	color: #444444;
+}
+
+.ajax__tab_xp1 .ajax__tab_outer {padding-right:4px;background:url(images/TAB/tab-right.gif) no-repeat right;height:21px;}
+.ajax__tab_xp1 .ajax__tab_inner {padding-left:3px;background:url(images/TAB/tab-left.gif) no-repeat;}
+.ajax__tab_xp1 .ajax__tab_tab {height:13px;padding:4px;margin:0;background:url(images/TAB/tab.gif) repeat-x;}
+.ajax__tab_xp1 .ajax__tab_hover .ajax__tab_outer {background:url(images/TAB/tab-hover-right.gif) no-repeat right;}
+.ajax__tab_xp1 .ajax__tab_hover .ajax__tab_inner {background:url(images/TAB/tab-hover-left.gif) no-repeat;}
+.ajax__tab_xp1 .ajax__tab_hover .ajax__tab_tab {background:url(images/TAB/tab-hover.gif) repeat-x;}
+.ajax__tab_xp1 .ajax__tab_active .ajax__tab_outer {background:url(images/TAB/tab-active-right.gif) no-repeat right;}
+.ajax__tab_xp1 .ajax__tab_active .ajax__tab_inner {background:url(images/TAB/tab-active-left.gif) no-repeat;}
+.ajax__tab_xp1 .ajax__tab_active .ajax__tab_tab {background:url(images/TAB/tab-active.gif) repeat-x;}
+
+.ajax__tab_xp1 .ajax__tab_body 
+{
+	font-family:verdana,tahoma,helvetica;
+	font-size:10pt;
+	border:1px solid #999999;
+	border-top:0;
+	padding:8px;
+	/*background:url(images/blue/bgblueForm.gif) repeat-x;*/
+	background:url(images/Green/bgGreenForm.gif)repeat-x; 
+}
+
+/* scrolling */
+.ajax__scroll_horiz {overflow-x:scroll;}
+.ajax__scroll_vert {overflow-y:scroll;}
+.ajax__scroll_both {overflow:scroll}
+.ajax__scroll_auto {overflow:auto}

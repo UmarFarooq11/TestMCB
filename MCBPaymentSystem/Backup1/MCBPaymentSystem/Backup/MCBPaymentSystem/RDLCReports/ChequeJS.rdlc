@@ -1,0 +1,434 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSources>
+    <DataSource Name="DummyDataSource">
+      <rd:DataSourceID>528ca72f-80f3-41af-9f68-354bdf95d767</rd:DataSourceID>
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+    </DataSource>
+  </DataSources>
+  <InteractiveHeight>11.7in</InteractiveHeight>
+  <ReportParameters>
+    <ReportParameter Name="OrganizationName">
+      <DataType>String</DataType>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Report_Parameter_0</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="ReportHeading">
+      <DataType>String</DataType>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Report_Parameter_1</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <rd:DrawGrid>true</rd:DrawGrid>
+  <InteractiveWidth>8.5in</InteractiveWidth>
+  <rd:GridSpacing>0.05in</rd:GridSpacing>
+  <rd:SnapToGrid>true</rd:SnapToGrid>
+  <rd:ReportID>3760a19c-98ee-4b54-8250-48b10b50aecf</rd:ReportID>
+  <DataSets>
+    <DataSet Name="MCB_DataSet_SP_DRAFTTRANSACTION_RPT">
+      <Fields>
+        <Field Name="rowid">
+          <DataField>rowid</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="company_code">
+          <DataField>company_code</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="company_name">
+          <DataField>company_name</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="company_addre">
+          <DataField>company_addre</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="draftno">
+          <DataField>draftno</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="trans_type">
+          <DataField>trans_type</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="draftdate">
+          <DataField>draftdate</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="transfer_method">
+          <DataField>transfer_method</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="bene_name">
+          <DataField>bene_name</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="bene_address">
+          <DataField>bene_address</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ACCOUNTNO">
+          <DataField>ACCOUNTNO</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="NICNO">
+          <DataField>NICNO</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="rem_name">
+          <DataField>rem_name</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="rem_add">
+          <DataField>rem_add</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="rem_ph">
+          <DataField>rem_ph</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="STATUS">
+          <DataField>STATUS</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="remarks">
+          <DataField>remarks</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CUSTREFNUMBER">
+          <DataField>CUSTREFNUMBER</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="E_DATETIME">
+          <DataField>E_DATETIME</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PHONENO">
+          <DataField>PHONENO</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="correspondingbankid">
+          <DataField>correspondingbankid</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="branchid">
+          <DataField>branchid</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="bank_name">
+          <DataField>bank_name</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="branch_name">
+          <DataField>branch_name</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="auth_status">
+          <DataField>auth_status</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="amount">
+          <DataField>amount</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="amount_to_word">
+          <DataField>amount_to_word</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="bank_add">
+          <DataField>bank_add</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="REFERENCE_1">
+          <DataField>REFERENCE#1</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="REFERENCE_2">
+          <DataField>REFERENCE#2</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="REFERENCE_3">
+          <DataField>REFERENCE#3</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="REFERENCE_4">
+          <DataField>REFERENCE#4</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="branch_name_add">
+          <DataField>branch_name_add</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SIGNATORY1IMAGE">
+          <DataField>SIGNATORY1IMAGE</DataField>
+          <rd:TypeName>System.Byte[]</rd:TypeName>
+        </Field>
+        <Field Name="SIGNATORY2IMAGE">
+          <DataField>SIGNATORY2IMAGE</DataField>
+          <rd:TypeName>System.Byte[]</rd:TypeName>
+        </Field>
+        <Field Name="RDLC_UPLOAD">
+          <DataField>RDLC_UPLOAD</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="advising">
+          <DataField>advising</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="MICR">
+          <DataField>MICR</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DummyDataSource</DataSourceName>
+        <CommandText />
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+      <rd:DataSetInfo>
+        <rd:DataSetName>MCB_DataSet</rd:DataSetName>
+        <rd:TableName>DraftTransaction</rd:TableName>
+      </rd:DataSetInfo>
+    </DataSet>
+  </DataSets>
+  <Width>8.75in</Width>
+  <Body>
+    <ReportItems>
+      <List Name="list1">
+        <DataSetName>MCB_DataSet_SP_DRAFTTRANSACTION_RPT</DataSetName>
+        <ReportItems>
+          <Textbox Name="DRAFTNO">
+            <rd:DefaultName>DRAFTNO</rd:DefaultName>
+            <Top>0.7in</Top>
+            <Width>1.2in</Width>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>14</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>7.25in</Left>
+            <Height>0.2in</Height>
+            <Value>=Fields!draftno.Value</Value>
+          </Textbox>
+          <Textbox Name="textbox4">
+            <Top>8.45in</Top>
+            <Width>1.2in</Width>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>13</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>7.1in</Left>
+            <Height>0.2in</Height>
+            <Value>=Fields!draftno.Value</Value>
+          </Textbox>
+          <Textbox Name="textbox2">
+            <Top>1.97708in</Top>
+            <Width>1.35in</Width>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>12</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>0.75in</Left>
+            <Height>0.2in</Height>
+            <Value>=Fields!amount.Value</Value>
+          </Textbox>
+          <Textbox Name="textbox1">
+            <Top>1.6875in</Top>
+            <Width>4.625in</Width>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>11</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>0.75in</Left>
+            <Height>0.2in</Height>
+            <Value>=Fields!amount_to_word.Value</Value>
+          </Textbox>
+          <Textbox Name="textbox10">
+            <Top>9.7in</Top>
+            <Width>1.35in</Width>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>10</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>6.75in</Left>
+            <Height>0.2in</Height>
+            <Value>=Fields!amount.Value</Value>
+          </Textbox>
+          <Textbox Name="textbox7">
+            <Top>9.57917in</Top>
+            <Width>4.35in</Width>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>9</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>1.9in</Left>
+            <Height>0.2in</Height>
+            <Value>=Fields!amount_to_word.Value</Value>
+          </Textbox>
+          <Textbox Name="textbox8">
+            <Top>9.23958in</Top>
+            <Width>3.5in</Width>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>8</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>0.95in</Left>
+            <Height>0.2in</Height>
+            <Value>=Fields!bene_name.Value</Value>
+          </Textbox>
+          <Textbox Name="textbox5">
+            <Top>8.75in</Top>
+            <Width>1.2in</Width>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>7</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>6.7in</Left>
+            <Height>0.2in</Height>
+            <Value>=Fields!draftdate.Value</Value>
+          </Textbox>
+          <Textbox Name="textbox3">
+            <Top>2.76042in</Top>
+            <Width>3.5in</Width>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>6</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>0.75in</Left>
+            <Height>0.2in</Height>
+            <Value>=Fields!bene_name.Value</Value>
+          </Textbox>
+          <Textbox Name="textbox11">
+            <rd:DefaultName>textbox11</rd:DefaultName>
+            <Top>11.2in</Top>
+            <Width>4.75in</Width>
+            <Style>
+              <FontFamily>MICRdarkN2 Sample</FontFamily>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>5</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>0.55in</Left>
+            <Height>0.2in</Height>
+            <Value>=Fields!MICR.Value</Value>
+          </Textbox>
+          <Image Name="image2">
+            <Sizing>Fit</Sizing>
+            <Top>10.45208in</Top>
+            <Width>0.8in</Width>
+            <MIMEType>image/jpeg</MIMEType>
+            <Source>Database</Source>
+            <Style />
+            <ZIndex>4</ZIndex>
+            <Left>7.4in</Left>
+            <Height>0.4in</Height>
+            <Value>=Fields!SIGNATORY2IMAGE.Value</Value>
+          </Image>
+          <Image Name="image1">
+            <Sizing>Fit</Sizing>
+            <Top>10.45208in</Top>
+            <Width>0.8in</Width>
+            <MIMEType>image/jpeg</MIMEType>
+            <Source>Database</Source>
+            <Style />
+            <ZIndex>3</ZIndex>
+            <Left>4.8in</Left>
+            <Height>0.4in</Height>
+            <Value>=Fields!SIGNATORY1IMAGE.Value</Value>
+          </Image>
+          <Textbox Name="amount">
+            <rd:DefaultName>amount</rd:DefaultName>
+            <Top>3.35in</Top>
+            <Width>1.35in</Width>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>2</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>0.75in</Left>
+            <Height>0.2in</Height>
+            <Value>=Fields!amount.Value</Value>
+          </Textbox>
+          <Textbox Name="amount_to_word">
+            <rd:DefaultName>amount_to_word</rd:DefaultName>
+            <Top>3.06042in</Top>
+            <Width>4.625in</Width>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>1</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>0.75in</Left>
+            <Height>0.2in</Height>
+            <Value>=Fields!amount_to_word.Value</Value>
+          </Textbox>
+          <Textbox Name="bene_name">
+            <rd:DefaultName>bene_name</rd:DefaultName>
+            <Top>1.4in</Top>
+            <Width>3.05in</Width>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Left>0.75in</Left>
+            <Height>0.2in</Height>
+            <Value>=Fields!bene_name.Value</Value>
+          </Textbox>
+        </ReportItems>
+      </List>
+    </ReportItems>
+    <Height>11.5in</Height>
+  </Body>
+  <Language>en-US</Language>
+  <PageHeight>11.7in</PageHeight>
+</Report>

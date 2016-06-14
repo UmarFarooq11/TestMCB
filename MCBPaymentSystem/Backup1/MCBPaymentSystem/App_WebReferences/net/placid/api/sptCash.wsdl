@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:tns="http://api.placid.net/ns1" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns="http://www.w3.org/2001/XMLSchema" name="sptCash" targetNamespace="http://api.placid.net/ns1" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <schema elementFormDefault="qualified" targetNamespace="http://api.placid.net/ns1">
+      <element name="FetchTX">
+        <complexType>
+          <sequence>
+            <element name="PayeeCode" type="string" />
+            <element name="UserName" type="string" />
+            <element name="AccessCode" type="string" />
+            <element name="TerminalUser" type="string" />
+            <element name="ExtraValue" type="string" />
+            <element name="Location" type="string" />
+            <element name="TrackingNum" type="string" />
+            <element name="ReceiverName" type="string" />
+            <element name="ReceiverPhone" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="ShowTX">
+        <complexType>
+          <sequence>
+            <element name="TrackingNum" type="string" />
+            <element name="Token" type="string" />
+            <element name="Status" type="string" />
+            <element name="StatusMessage" type="string" />
+            <element name="SenderName" type="string" />
+            <element name="SenderAddress" type="string" />
+            <element name="SenderCountry" type="string" />
+            <element name="SenderCity" type="string" />
+            <element name="SenderPhone" type="string" />
+            <element name="ReceiverName" type="string" />
+            <element name="ReceiverAddress" type="string" />
+            <element name="ReceiverCountry" type="string" />
+            <element name="ReceiverCity" type="string" />
+            <element name="ReceiverPhone" type="string" />
+            <element name="ReceiverMobile" type="string" />
+            <element name="ReceiverId" type="string" />
+            <element name="ReceiverIdNumber" type="string" />
+            <element name="PayoutAmount" type="string" />
+            <element name="PayoutCurrency" type="string" />
+            <element name="ExchangeRate" type="string" />
+            <element name="OrgCurrency" type="string" />
+            <element name="OrgAmount" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="RejectPay">
+        <complexType>
+          <sequence>
+            <element name="PayeeCode" type="string" />
+            <element name="UserName" type="string" />
+            <element name="AccessCode" type="string" />
+            <element name="TerminalUser" type="string" />
+            <element name="ExtraValue" type="string" />
+            <element name="Location" type="string" />
+            <element name="TrackingNum" type="string" />
+            <element name="Token" type="string" />
+            <element name="RejectReason" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="RejectRes">
+        <complexType>
+          <sequence>
+            <element name="TrackingNum" type="string" />
+            <element name="Token" type="string" />
+            <element name="Status" type="string" />
+            <element name="StatusMessage" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="PayTX">
+        <complexType>
+          <sequence>
+            <element name="PayeeCode" type="string" />
+            <element name="UserName" type="string" />
+            <element name="AccessCode" type="string" />
+            <element name="TerminalUser" type="string" />
+            <element name="ExtraValue" type="string" />
+            <element name="Location" type="string" />
+            <element name="TrackingNum" type="string" />
+            <element name="Token" type="string" />
+            <element name="ReceiverIdType" type="string" />
+            <element name="ReceiverIdNumber" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="ShowPayTX">
+        <complexType>
+          <sequence>
+            <element name="TrackingNum" type="string" />
+            <element name="Token" type="string" />
+            <element name="Status" type="string" />
+            <element name="StatusMessage" type="string" />
+            <element name="RefNumber" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="ReportReq">
+        <complexType>
+          <sequence>
+            <element name="PayeeCode" type="string" />
+            <element name="UserName" type="string" />
+            <element name="AccessCode" type="string" />
+            <element name="TerminalUser" type="string" />
+            <element name="ExtraValue" type="string" />
+            <element name="DateFrom" type="string" />
+            <element name="DateTo" type="string" />
+            <element name="RowNumber" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <complexType name="arrayofReportData">
+        <sequence>
+          <element minOccurs="0" maxOccurs="unbounded" name="ListReport" nillable="true" type="tns:ListReport" />
+        </sequence>
+      </complexType>
+      <complexType name="ListReport">
+        <sequence>
+          <element name="PayDate" type="string" />
+          <element name="PayTime" type="string" />
+          <element name="RefNumber" type="string" />
+          <element name="TrackingNum" type="string" />
+          <element name="UserName" type="string" />
+          <element name="TerminalUser" type="string" />
+          <element name="SenderName" type="string" />
+          <element name="SenderAddress" type="string" />
+          <element name="SenderCountry" type="string" />
+          <element name="SenderCity" type="string" />
+          <element name="SenderPhone" type="string" />
+          <element name="ReceiverName" type="string" />
+          <element name="ReceiverAddress" type="string" />
+          <element name="ReceiverCountry" type="string" />
+          <element name="ReceiverCity" type="string" />
+          <element name="ReceiverPhone" type="string" />
+          <element name="ReceiverMobile" type="string" />
+          <element name="ReceiverId" type="string" />
+          <element name="ReceiverIdNumber" type="string" />
+          <element name="PayoutAmount" type="string" />
+          <element name="PayoutCurrency" type="string" />
+          <element name="ExchangeRate" type="string" />
+          <element name="OrgCurrency" type="string" />
+          <element name="OrgAmount" type="string" />
+        </sequence>
+      </complexType>
+      <element name="ReportResp">
+        <complexType>
+          <sequence>
+            <element name="Status" type="string" />
+            <element name="StatusMessage" type="string" />
+            <element name="RowNumber" type="string" />
+            <element name="ReportResult" type="tns:arrayofReportData" />
+          </sequence>
+        </complexType>
+      </element>
+    </schema>
+  </wsdl:types>
+  <wsdl:message name="TxnRequest">
+    <wsdl:part name="TxnRequest" element="tns:FetchTX" />
+  </wsdl:message>
+  <wsdl:message name="TxnResponse">
+    <wsdl:part name="TxnResponse" element="tns:ShowTX" />
+  </wsdl:message>
+  <wsdl:message name="RejRequest">
+    <wsdl:part name="RejRequest" element="tns:RejectPay" />
+  </wsdl:message>
+  <wsdl:message name="RejResponse">
+    <wsdl:part name="RejResponse" element="tns:RejectRes" />
+  </wsdl:message>
+  <wsdl:message name="PayRequest">
+    <wsdl:part name="PayRequest" element="tns:PayTX" />
+  </wsdl:message>
+  <wsdl:message name="PayResponse">
+    <wsdl:part name="PayResponse" element="tns:ShowPayTX" />
+  </wsdl:message>
+  <wsdl:message name="ReportRequest">
+    <wsdl:part name="ReportRequest" element="tns:ReportReq" />
+  </wsdl:message>
+  <wsdl:message name="ReportResponse">
+    <wsdl:part name="ReportResponse" element="tns:ReportResp" />
+  </wsdl:message>
+  <wsdl:portType name="spotCashPortType">
+    <wsdl:operation name="LocateTX">
+      <wsdl:input message="tns:TxnRequest" />
+      <wsdl:output message="tns:TxnResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="RejectTX">
+      <wsdl:input message="tns:RejRequest" />
+      <wsdl:output message="tns:RejResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="PayTX">
+      <wsdl:input message="tns:PayRequest" />
+      <wsdl:output message="tns:PayResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReport">
+      <wsdl:input message="tns:ReportRequest" />
+      <wsdl:output message="tns:ReportResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="spotCashBinding" type="tns:spotCashPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="LocateTX">
+      <soap:operation soapAction="http://api.placid.net/LocateTX" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RejectTX">
+      <soap:operation soapAction="http://api.placid.net/RejectTX" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PayTX">
+      <soap:operation soapAction="http://api.placid.net/PayTX" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReport">
+      <soap:operation soapAction="http://api.placid.net/GetReport" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="spotCashService">
+    <wsdl:port name="spotCashPort" binding="tns:spotCashBinding">
+      <soap:address location="https://api.placid.net/scp-api/service.php" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

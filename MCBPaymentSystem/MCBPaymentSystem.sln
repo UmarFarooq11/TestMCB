@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "MCBPaymentSystem", "..\MCBPaymentSystem", "{6398D2F8-6EC2-4255-95AC-A2C22A979746}"
+	ProjectSection(WebsiteProperties) = preProject
+		SccProjectName = ""$/MCBCS.root/MCBPaymentSystem", SHKAAAAA"
+		SccAuxPath = ""
+		SccLocalPath = "."
+		SccProvider = "MSSCCI:Microsoft Visual SourceSafe"
+		TargetFramework = "3.5"
+		Debug.AspNetCompiler.VirtualPath = "/MCBPaymentSystem"
+		Debug.AspNetCompiler.PhysicalPath = "D:\My Working Folder\MCB Working Folder\MCBPaymentSystem\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\MCBPaymentSystem\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/MCBPaymentSystem"
+		Release.AspNetCompiler.PhysicalPath = "D:\My Working Folder\MCB Working Folder\MCBPaymentSystem\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\MCBPaymentSystem\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "1283"
+		VWDDynamicPort = "false"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 1
+		SccWebProject0 = true
+		SccProjectUniqueName0 = .
+		SccProjectName0 = \u0022$/MCBCS.root/MCBPaymentSystem\u0022,\u0020SHKAAAAA
+		SccLocalPath0 = D:\\My\u0020Working\u0020Folder\\MCB\u0020Working\u0020Folder\\MCBPaymentSystem
+		SccProvider0 = MSSCCI:Microsoft\u0020Visual\u0020SourceSafe
+		SccProjectEnlistmentChoice0 = 2
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|.NET = Debug|.NET
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6398D2F8-6EC2-4255-95AC-A2C22A979746}.Debug|.NET.ActiveCfg = Debug|.NET
+		{6398D2F8-6EC2-4255-95AC-A2C22A979746}.Debug|.NET.Build.0 = Debug|.NET
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

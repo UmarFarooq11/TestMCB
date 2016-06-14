@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:tns="CES.Services.FXGlobal" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" targetNamespace="CES.Services.FXGlobal" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="CES.Services.FXGlobal/Imports">
+      <xsd:import schemaLocation="http://stagingfxglobalwebsvc.riaenvia.net:9770/FXGlobalSending.svc?xsd=xsd0" namespace="CES.Services.FXGlobal" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IRiaAsSender_OP_VerifyOrderForPayout_InputMessage">
+    <wsdl:part name="parameters" element="tns:OP_VerifyOrderForPayout" />
+  </wsdl:message>
+  <wsdl:message name="IRiaAsSender_OP_VerifyOrderForPayout_OutputMessage">
+    <wsdl:part name="parameters" element="tns:OP_VerifyOrderForPayoutResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRiaAsSender_OP_ConfirmOrderPaid_InputMessage">
+    <wsdl:part name="parameters" element="tns:OP_ConfirmOrderPaid" />
+  </wsdl:message>
+  <wsdl:message name="IRiaAsSender_OP_ConfirmOrderPaid_OutputMessage">
+    <wsdl:part name="parameters" element="tns:OP_ConfirmOrderPaidResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRiaAsSender_OP_VoidOrderPaidConfirmation_InputMessage">
+    <wsdl:part name="parameters" element="tns:OP_VoidOrderPaidConfirmation" />
+  </wsdl:message>
+  <wsdl:message name="IRiaAsSender_OP_VoidOrderPaidConfirmation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:OP_VoidOrderPaidConfirmationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRiaAsSender_GetSendersCustSvcMsgs_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSendersCustSvcMsgs" />
+  </wsdl:message>
+  <wsdl:message name="IRiaAsSender_GetSendersCustSvcMsgs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSendersCustSvcMsgsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRiaAsSender_GetCancellationRequests_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCancellationRequests" />
+  </wsdl:message>
+  <wsdl:message name="IRiaAsSender_GetCancellationRequests_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCancellationRequestsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRiaAsSender_GetOrdersForDownload_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrdersForDownload" />
+  </wsdl:message>
+  <wsdl:message name="IRiaAsSender_GetOrdersForDownload_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrdersForDownloadResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRiaAsSender_InputPayersCustSvcMsgs_InputMessage">
+    <wsdl:part name="parameters" element="tns:InputPayersCustSvcMsgs" />
+  </wsdl:message>
+  <wsdl:message name="IRiaAsSender_InputPayersCustSvcMsgs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InputPayersCustSvcMsgsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRiaAsSender_InputOrderStatusNotices_InputMessage">
+    <wsdl:part name="parameters" element="tns:InputOrderStatusNotices" />
+  </wsdl:message>
+  <wsdl:message name="IRiaAsSender_InputOrderStatusNotices_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InputOrderStatusNoticesResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IRiaAsSender">
+    <wsdl:operation name="OP_VerifyOrderForPayout">
+      <wsdl:input wsaw:Action="CES.Services.FXGlobal/IRiaAsSender/OP_VerifyOrderForPayout" message="tns:IRiaAsSender_OP_VerifyOrderForPayout_InputMessage" />
+      <wsdl:output wsaw:Action="CES.Services.FXGlobal/IRiaAsSender/OP_VerifyOrderForPayoutResponse" message="tns:IRiaAsSender_OP_VerifyOrderForPayout_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="OP_ConfirmOrderPaid">
+      <wsdl:input wsaw:Action="CES.Services.FXGlobal/IRiaAsSender/OP_ConfirmOrderPaid" message="tns:IRiaAsSender_OP_ConfirmOrderPaid_InputMessage" />
+      <wsdl:output wsaw:Action="CES.Services.FXGlobal/IRiaAsSender/OP_ConfirmOrderPaidResponse" message="tns:IRiaAsSender_OP_ConfirmOrderPaid_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="OP_VoidOrderPaidConfirmation">
+      <wsdl:input wsaw:Action="CES.Services.FXGlobal/IRiaAsSender/OP_VoidOrderPaidConfirmation" message="tns:IRiaAsSender_OP_VoidOrderPaidConfirmation_InputMessage" />
+      <wsdl:output wsaw:Action="CES.Services.FXGlobal/IRiaAsSender/OP_VoidOrderPaidConfirmationResponse" message="tns:IRiaAsSender_OP_VoidOrderPaidConfirmation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSendersCustSvcMsgs">
+      <wsdl:input wsaw:Action="CES.Services.FXGlobal/IRiaAsSender/GetSendersCustSvcMsgs" message="tns:IRiaAsSender_GetSendersCustSvcMsgs_InputMessage" />
+      <wsdl:output wsaw:Action="CES.Services.FXGlobal/IRiaAsSender/GetSendersCustSvcMsgsResponse" message="tns:IRiaAsSender_GetSendersCustSvcMsgs_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCancellationRequests">
+      <wsdl:input wsaw:Action="CES.Services.FXGlobal/IRiaAsSender/GetCancellationRequests" message="tns:IRiaAsSender_GetCancellationRequests_InputMessage" />
+      <wsdl:output wsaw:Action="CES.Services.FXGlobal/IRiaAsSender/GetCancellationRequestsResponse" message="tns:IRiaAsSender_GetCancellationRequests_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrdersForDownload">
+      <wsdl:input wsaw:Action="CES.Services.FXGlobal/IRiaAsSender/GetOrdersForDownload" message="tns:IRiaAsSender_GetOrdersForDownload_InputMessage" />
+      <wsdl:output wsaw:Action="CES.Services.FXGlobal/IRiaAsSender/GetOrdersForDownloadResponse" message="tns:IRiaAsSender_GetOrdersForDownload_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InputPayersCustSvcMsgs">
+      <wsdl:input wsaw:Action="CES.Services.FXGlobal/IRiaAsSender/InputPayersCustSvcMsgs" message="tns:IRiaAsSender_InputPayersCustSvcMsgs_InputMessage" />
+      <wsdl:output wsaw:Action="CES.Services.FXGlobal/IRiaAsSender/InputPayersCustSvcMsgsResponse" message="tns:IRiaAsSender_InputPayersCustSvcMsgs_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InputOrderStatusNotices">
+      <wsdl:input wsaw:Action="CES.Services.FXGlobal/IRiaAsSender/InputOrderStatusNotices" message="tns:IRiaAsSender_InputOrderStatusNotices_InputMessage" />
+      <wsdl:output wsaw:Action="CES.Services.FXGlobal/IRiaAsSender/InputOrderStatusNoticesResponse" message="tns:IRiaAsSender_InputOrderStatusNotices_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

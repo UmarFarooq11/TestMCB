@@ -1,0 +1,17 @@
+<%@ Page Language="C#" MasterPageFile="~/MasterPage/BoldMove.master" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="MasterPage_Default" Title="Untitled Page" %>
+<%@ Register
+Assembly="AjaxControlToolkit"
+Namespace="AjaxControlToolkit"
+TagPrefix="ajaxToolkit" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+    <asp:ScriptManager id="ScriptManager1" runat="server">
+    </asp:ScriptManager>
+    &nbsp;
+    <asp:UpdatePanel id="UpdatePanel1" runat="server">
+        <contenttemplate>
+<asp:Panel id="Panel1" runat="server" Height="50px" Width="100%" BackColor="#E0E0E0"> </asp:Panel> <asp:Button id="Button1" runat="server" Text="Button"></asp:Button> <ajaxToolkit:CollapsiblePanelExtender id="CollapsiblePanelExtender1" runat="server" TargetControlID="Panel1" CollapseControlID="Button1" ExpandControlID="Button1"></ajaxToolkit:CollapsiblePanelExtender>
+</contenttemplate>
+    </asp:UpdatePanel>
+</asp:Content>
+

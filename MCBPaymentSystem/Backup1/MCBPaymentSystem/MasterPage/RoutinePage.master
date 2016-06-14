@@ -1,0 +1,94 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="RoutinePage.master.cs"
+    Inherits="MasterPage_BoldMoveMain" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
+<%@ Register Src="../WebControls/SSO_Control.ascx" TagName="SSO_Control" TagPrefix="uc1" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>Untitled Page</title>
+    <link href="../demos.css" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript" src="../js/jquery.js"></script>
+
+    <script type="text/javascript" src="../js/jquery.dataTables.js"></script>
+
+    <script src="../js/ui.datepicker.js" type="text/javascript"></script>
+
+    <link href="../style/ui.datepicker.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+    .hidden {display:none;}
+
+    </style>
+
+    <script type="text/javascript">
+    
+    /////////yas//////////////
+var IDLE_TIMEOUT = 1800; //seconds
+var _idleSecondsCounter = 0;
+document.onclick = function() {
+    _idleSecondsCounter = 0;
+};
+//document.onmousemove = function() {
+//    _idleSecondsCounter = 0;
+//};
+document.onkeypress = function() {
+    _idleSecondsCounter = 0;
+};
+window.setInterval(CheckIdleTime, 1000);
+
+function CheckIdleTime() {
+    _idleSecondsCounter++;
+    var oPanel = document.getElementById("SecondsUntilExpire");
+    if (oPanel)
+        oPanel.innerHTML = (IDLE_TIMEOUT - _idleSecondsCounter) + "";
+    if (_idleSecondsCounter >= IDLE_TIMEOUT) {
+    
+   var page= document.getElementById("ctl00_txtpage").value
+     ///   alert(page);
+       // document.location.href = "http://localhost:1261/SSO_Framework/MasterPage/systemlogin.aspx";
+       ///self.parent.location.href = "http://localhost:1261/SSO_Framework/MasterPage/systemlogin.aspx";
+       self.parent.location.href = page;
+        
+    }
+}
+
+
+    </script>
+
+</head>
+<body style="background-color: #f6f6f6">
+    <form id="form1" runat="server">
+        <!-- Create Menu Settings: (Menu ID, Is Vertical, Show Timer, Hide Timer, On Click (options: 'all' * 'all-always-open' * 'main' * 'lev2'), Right to Left, Horizontal Subs, Flush Left, Flush Top) -->
+        <table cellspacing="0" width="100%">
+            <tr>
+                <td style="text-align: left; height: 21px;">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+        </table>
+        <table cellspacing="0" width="100%">
+            <tr>
+                <td style="font-weight: bold; font-size: 9pt; color: #444444; font-family: Arial, Tahoma;
+                    text-align: center">
+                    <asp:TextBox ID="txtpage" runat="server" Width="1px"></asp:TextBox></td>
+            </tr>
+            <tr>
+                <td style="font-weight: bold; font-size: 9pt; color: #444444; font-family: Arial, Tahoma;
+                    text-align: center">
+                </td>
+            </tr>
+        </table>
+        <asp:Button ID="CMD_AUTHORIZE" runat="server" Text="Authorize / UnAuthorize" Visible="False"
+            OnClick="CMD_AUTHORIZE_Click" TabIndex="-1" />
+        <asp:ImageButton ID="COLOR1" runat="server" ImageUrl="~/Images/colors.blue.icon.gif"
+            OnClick="COLOR1_Click" TabIndex="-1" Visible="False" /><asp:ImageButton ID="COLOR2"
+                runat="server" ImageUrl="~/Images/colors.green.icon.gif" OnClick="COLOR2_Click"
+                TabIndex="-1" Visible="False" /><asp:ImageButton ID="COLOR3" runat="server" ImageUrl="~/Images/colors.ocher.icon.gif"
+                    OnClick="COLOR3_Click" TabIndex="-1" Visible="False" /><asp:ImageButton ID="COLOR4"
+                        runat="server" ImageUrl="~/Images/colors.purple.icon.gif" OnClick="COLOR4_Click"
+                        TabIndex="-1" Visible="False" /><asp:ImageButton ID="COLOR5" runat="server" ImageUrl="~/Images/colors.sugar.icon.gif"
+                            OnClick="COLOR5_Click" TabIndex="-1" Visible="False" />
+    </form>
+</body>
+</html>

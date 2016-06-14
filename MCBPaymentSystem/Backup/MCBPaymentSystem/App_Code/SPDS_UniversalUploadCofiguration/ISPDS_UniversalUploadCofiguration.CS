@@ -1,0 +1,39 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+using System.Data;
+using System.Data.SqlClient;
+
+    interface ISPDS_UniversalUploadCofiguration
+    {
+        void RecordInputStart();
+        void RecordInputCommit();
+        DataSet ReturnResultSet();
+        void ClearTable();
+      String Get_A_DateTime
+		{ set;}
+      String Get_A_userID
+		{ set;}
+      String Get_ArchivePath
+		{ set;}
+      String Get_Channel
+		{ set;}
+      String Get_ConfigurationName
+		{ set;}
+      String Get_E_DateTime
+		{ set;}
+      String Get_E_UserID
+		{ set;}
+      String Get_FileFormat
+		{ set;}
+      String Get_FilePath
+		{ set;}
+      String Get_ID
+		{ set;}
+      String Get_ObjectName
+		{ set;}
+      String Get_ObjectType
+		{ set;}
+      String Get_SourceID
+		{ set;}
+      }

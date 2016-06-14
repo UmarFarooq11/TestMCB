@@ -1,0 +1,172 @@
+/*!!!!!!!!!!! QuickMenu Core CSS [Do Not Modify!] !!!!!!!!!!!!!*/
+.qmmc .qmdivider{display:block;font-size:1px;border-width:0px;border-style:solid;position:relative;z-index:1;}.qmmc .qmdividery{float:left;width:0px;}.qmmc .qmtitle{display:block;cursor:default;white-space:nowrap;position:relative;z-index:1;}.qmclear {font-size:1px;height:0px;width:0px;clear:left;line-height:0px;display:block;float:none !important;}.qmmc {position:relative;zoom:1;z-index:10;}.qmmc a, .qmmc li {float:left;display:block;white-space:nowrap;position:relative;z-index:1;}.qmmc div a, .qmmc ul a, .qmmc ul li {float:none;}.qmsh div a {float:left;}.qmmc div{visibility:hidden;position:absolute;}.qmmc .qmcbox{cursor:default;display:block;position:relative;z-index:1;}.qmmc .qmcbox a{display:inline;}.qmmc .qmcbox div{float:none;position:static;visibility:inherit;left:auto;}.qmmc li {z-index:auto;}.qmmc ul {left:-10000px;position:absolute;z-index:10;}.qmmc, .qmmc ul {list-style:none;padding:0px;margin:0px;}.qmmc li a {float:none;}.qmmc li:hover>ul{left:auto;}#qm0 ul {top:100%;}#qm0 ul li:hover>ul{top:0px;left:100%;}
+
+
+/*!!!!!!!!!!! QuickMenu Styles [Please Modify!] !!!!!!!!!!!*/
+
+
+	/* QuickMenu 0 */
+
+	/*"""""""" (MAIN) Container""""""""*/	
+	#qm0	
+	{	
+		padding:3px 0px 3px 8px;
+		background-color:#eeeeee;		
+		border-width:1px;
+		border-style:solid;
+		border-color:#a2bfe9;
+	}
+
+
+	/*"""""""" (MAIN) Items""""""""*/	
+	#qm0 a	
+	{	
+		padding:5px 30px 5px 8px;
+		margin:0px;
+		color:#112747;
+		font-family:Arial;
+		font-size:10px;
+		text-decoration:none;
+	}
+
+
+	/*"""""""" (SUB) Container""""""""*/	
+	#qm0 div, #qm0 ul	
+	{	
+		padding:10px 15px 15px;
+		margin:-4px 0px 0px -6px;
+		background-color:transparent;
+		border-style:none;
+	}
+
+
+	/*"""""""" (SUB) Items""""""""*/	
+	#qm0 div a, #qm0 ul a	
+	{	
+		padding:3px 10px 3px 5px;
+		margin:0px;
+		background-color:transparent;
+		font-size:10px;
+		border-width:0px;
+		border-style:none;
+	}
+
+
+	/*"""""""" (SUB) Hover State""""""""*/	
+	#qm0 div a:hover	
+	{	
+		background-color:#285da8;
+		color:#eeeeee;
+	}
+
+
+	/*"""""""" (SUB) Hover State - (duplicated for pure CSS)""""""""*/	
+	#qm0 ul li:hover>a	
+	{	
+		background-color:#285da8;
+		color:#eeeeee;
+	}
+
+
+	/*"""""""" (SUB) Active State""""""""*/	
+	body #qm0 div .qmactive, body #qm0 div .qmactive:hover	
+	{	
+		background-color:#285da8;
+		color:#eeeeee;
+	}
+
+
+	/*"""""""" Individual Titles""""""""*/	
+	#qm0 .qmtitle	
+	{	
+		padding:2px 0px 2px 5px;
+		margin:10px -4px 5px;
+		background-color:#afc8ec;
+		color:#112747;
+		font-family:Arial;
+		font-size:9px;
+		font-weight:bold;
+		border-width:1px;
+		border-style:solid;
+		border-color:#285da8;
+	}
+
+
+	/*"""""""" (main) Rounded Items""""""""*/	
+	#qm0 .qmritem span	
+	{	
+		border-color:#285da8;
+		background-color:#d7e3f6;
+	}
+
+
+	/*"""""""" (main) Rounded Items Content""""""""*/	
+	#qm0 .qmritemcontent	
+	{	
+		padding:1px 0px 0px 7px;
+	}
+
+
+	/*"""""""" (sub) Rounded Items""""""""*/	
+	#qm0 div .qmritem span	
+	{	
+		border-color:#666666;
+		background-color:#eeeeee;
+	}
+
+
+	/*"""""""" (sub) Rounded Items Content""""""""*/	
+	#qm0 div .qmritemcontent	
+	{	
+		padding:0px 0px 0px 4px;
+	}
+
+
+	/*"""""""" Custom Rule""""""""*/	
+	ul#qm0 li .qmparent	
+	{	 	    
+		background-image: url(qmimages/arrow_6.gif);
+		background-repeat:no-repeat;
+		background-position:92% 50%;
+	}
+
+
+	/*"""""""" Custom Rule""""""""*/	
+	ul#qm0 li:hover > a	
+	{	
+		background-color:#d7e3f6;
+	}
+
+
+	/*"""""""" Custom Rule""""""""*/	
+	ul#qm0 ul li .qmparent	
+	{	
+		background-image:url(qmimages/arrow_4.gif);
+	}
+
+
+	/*"""""""" Custom Rule""""""""*/	
+	ul#qm0 ul li:hover > a.qmparent	
+	{	
+		background-image:url(qmimages/arrow_5.gif);
+	}
+
+
+	/*"""""""" Custom Rule""""""""*/	
+	ul#qm0 ul li:hover > a	
+	{	
+		background-color:#285da8;
+	}
+
+
+	/*"""""""" Custom Rule""""""""*/	
+	ul#qm0 ul	
+	{	
+		margin:0px;
+		background-color:#d7e3f6;
+		border-width:1px;
+		border-style:solid;
+		border-color:#285da8;
+	}
+
+

@@ -1,0 +1,249 @@
+<%--
+Default skin template. The following skins are provided as examples only.
+
+1. Named control skin. The SkinId should be uniquely defined because
+   duplicate SkinId's per control type are not allowed in the same theme.
+
+<asp:GridView runat="server" SkinId="gridviewSkin" BackColor="White" >
+   <AlternatingRowStyle BackColor="Blue" />
+</asp:GridView>
+
+2. Default skin. The SkinId is not defined. Only one default 
+   control skin per control type is allowed in the same theme.
+
+<asp:Image runat="server" ImageUrl="~/images/image1.jpg" />
+--%>
+
+<asp:Image SkinId="Logo" runat="server" ImageUrl="~/images/BrandSr/white/GreenLogo_WHITE.jpg" />
+
+
+<asp:Label 
+SkinId="LBL_ERROR" 
+runat="server" 
+ForeColor="Red"
+Style="FONT-WEIGHT: bold; 
+       font-size: 10pt;  
+       TEXT-ALIGN: center;
+       font-family: Arial, Tahoma">
+</asp:Label>   
+
+<asp:Label 
+runat="server"  
+Font-Names="Arial, Tahoma" 
+Font-Size="8pt" 
+style="color: #444444;">
+</asp:Label> 
+
+
+<asp:Label 
+SkinId="LBL_STATUS" 
+runat="server" 
+Style="FONT-WEIGHT: bold; 
+       font-size: 9pt;        
+       font-family: Arial, Tahoma">
+</asp:Label>   
+
+
+<asp:TextBox 
+SkinId="TXT" 
+runat="server" 
+Font-Names="Arial, Tahoma"  
+Font-Size="8pt"
+Style="border-right: #6cac6c thin solid; 
+border-top: #6cac6c thin solid; 
+border-left: #6cac6c thin solid; 
+border-bottom: #6cac6c thin solid;">
+</asp:TextBox>
+
+<asp:DropDownList       
+runat="server" 
+Font-Names="Arial, Tahoma"  
+Font-Size="8pt"
+Style="border-right: #6cac6c thin solid; 
+border-top: #6cac6c thin solid; 
+border-left: #6cac6c thin solid; 
+border-bottom: #6cac6c thin solid;">
+</asp:DropDownList>
+
+<asp:Label 
+SkinId="FormViewHeading" 
+runat="server"  
+Font-Names="Arial, Tahoma" 
+Font-Size="15pt" 
+Width="100%">
+</asp:Label> 
+
+ 
+<asp:Label 
+SkinId="HeadingExtra" 
+runat="server"  
+Font-Names="Arial, Tahoma" 
+Font-Size="15pt" 
+Width="100%"  
+style="background-color:#CAD7AB">
+</asp:Label> 
+
+
+<asp:Label 
+SkinId="HeadingExtra_SPC1" 
+runat="server"  
+Width="100%" 
+Style="FONT-WEIGHT: bold; 
+       font-size: 13pt;        
+       background-color:#CAD7AB;       
+       font-family: Arial, Tahoma">
+</asp:Label>        
+        
+<asp:Label 
+SkinId="Heading" 
+runat="server"  
+Font-Names="Arial, Tahoma" 
+Font-Size="15pt" 
+style="background-image: url(../Images/Green/bgGreen.gif); background-repeat: repeat-x"
+Width="100%">
+</asp:Label>
+ 
+<asp:Button 
+runat="server" 
+Font-Bold="True" 
+Font-Names="Arial, Tahoma"  
+Font-Size="9pt" 
+BorderColor="Green" 
+style="color: #444444; background-image: url(../Images/Green/bgGreen.gif); background-repeat: repeat-x"
+BorderStyle="Solid" 
+BorderWidth="1px" />
+    
+<asp:FormView 
+runat="server" 
+Font-Names="Arial, Tahoma"  
+Font-Size="10pt" 
+Width="100%" 
+BorderStyle="NotSet" 
+BorderWidth="0px">  
+</asp:FormView>
+  
+<asp:GridView 
+    runat="server" 
+    AllowPaging="True" 
+    AllowSorting="True"
+    AutoGenerateColumns="False" 
+    CellPadding="2" 
+    Font-Names="Arial, Tahoma" 
+    Font-Size="8pt" 
+    ForeColor="BLACK" 
+    PageSize="20" 
+    ShowFooter="False"
+    Style="width: 100%;" 
+    Width="100%" 
+    GridLines="None">
+    
+<SelectedRowStyle 
+BackColor="#C5BBAF" 
+ForeColor="#333333" 
+Font-Names="Arial, Tahoma"  
+Font-Size="8pt"
+Font-Bold="True" />
+
+<HeaderStyle   
+ BackColor="#1C5E55" 
+ Font-Names="Arial, Tahoma"  
+ Font-Size="9pt"
+ Font-Bold="True" 
+ ForeColor="White"/>
+
+
+<AlternatingRowStyle BackColor="White" />
+<RowStyle BackColor="#E3EAEB" />
+</asp:GridView>  
+
+
+<asp:GridView 
+    SkinId="GV1"
+    runat="server" 
+    AllowPaging="True" 
+    AllowSorting="True"
+    AutoGenerateColumns="False" 
+    CellPadding="2" 
+    Font-Names="Arial, Tahoma" 
+    Font-Size="8pt" 
+    ForeColor="BLACK" 
+    ShowFooter="False"
+    Style="width: 100%;" 
+    Width="100%" 
+    GridLines="None">
+    
+<SelectedRowStyle 
+BackColor="#C5BBAF" 
+ForeColor="#333333" 
+Font-Names="Arial, Tahoma"  
+Font-Size="8pt"
+Font-Bold="True" />
+
+<HeaderStyle   
+ BackColor="#1C5E55" 
+ Font-Names="Arial, Tahoma"  
+ Font-Size="9pt"
+ Font-Bold="True" 
+ ForeColor="White"/>
+
+
+<AlternatingRowStyle BackColor="White" />
+<RowStyle BackColor="#E3EAEB" />
+</asp:GridView>  
+
+<asp:GridView 
+    SkinId="GV5"
+    runat="server" 
+    AllowPaging="True" 
+    AllowSorting="True"
+    AutoGenerateColumns="False" 
+    CellPadding="2" 
+    Font-Names="Arial, Tahoma" 
+    Font-Size="8pt" 
+    ForeColor="BLACK" 
+    ShowFooter="False"
+    Style="width: 100%;" 
+    Width="100%" 
+    PageSize="5" 
+    GridLines="None">
+    
+<SelectedRowStyle 
+BackColor="#C5BBAF" 
+ForeColor="#333333" 
+Font-Names="Arial, Tahoma"  
+Font-Size="8pt"
+Font-Bold="True" />
+
+<HeaderStyle   
+ BackColor="#1C5E55" 
+ Font-Names="Arial, Tahoma"  
+ Font-Size="9pt"
+ Font-Bold="True" 
+ ForeColor="White"/>
+
+
+<AlternatingRowStyle BackColor="White" />
+<RowStyle BackColor="#E3EAEB" />
+</asp:GridView>  
+
+  
+   <asp:GridView SkinId="LOV_GRID" runat="server" AllowPaging="True" AllowSorting="True"
+    AutoGenerateColumns="False" CellPadding="2" 
+    Font-Names="Arial, Tahoma" Font-Size="8pt" ForeColor="#333333" PageSize="5" ShowFooter="True"
+        Style="width: 100%;" Width="100%" GridLines="None">
+        <PagerSettings FirstPageImageUrl="~/Images/MoveTop.gif" FirstPageText="Move First"
+            LastPageImageUrl="~/Images/MoveLast.gif" LastPageText="Move Last"
+            NextPageImageUrl="~/Images/MoveNext.gif" NextPageText="Move Next" PageButtonCount="100"
+            Position="TopAndBottom" PreviousPageImageUrl="~/Images/MovePrevious.gif" PreviousPageText="Move Previous" Mode="NextPreviousFirstLast" />
+        <FooterStyle BackColor="#1C5E55" BorderStyle="Solid" BorderWidth="1px" Font-Bold="True" ForeColor="White" />
+        <PagerStyle BackColor="#F6F6F6" BorderColor="#404040" BorderStyle="Solid" ForeColor="White"
+            HorizontalAlign="Right" />
+        <SelectedRowStyle BackColor="#C5BBAF" ForeColor="#333333" Font-Bold="True" />
+        <HeaderStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
+        <AlternatingRowStyle BackColor="White" />
+        <RowStyle BackColor="#E3EAEB" />
+        <EditRowStyle BackColor="#7C6F57" />
+    </asp:GridView>  
+
+      
+    

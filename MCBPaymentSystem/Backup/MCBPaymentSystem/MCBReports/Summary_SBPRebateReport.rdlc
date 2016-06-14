@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSources>
+    <DataSource Name="DummyDataSource">
+      <rd:DataSourceID>6719bb78-b1a8-4a0c-9f87-2d83e91454ca</rd:DataSourceID>
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+    </DataSource>
+  </DataSources>
+  <InteractiveHeight>11in</InteractiveHeight>
+  <ReportParameters>
+    <ReportParameter Name="BankName">
+      <DataType>String</DataType>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Report_Parameter_0</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="ReportName">
+      <DataType>String</DataType>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Report_Parameter_1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="USRate">
+      <DataType>String</DataType>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Report_Parameter_4</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="fc_saudiRiyal">
+      <DataType>String</DataType>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Report_Parameter_5</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="CompanyName">
+      <DataType>String</DataType>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>CompanyName</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="FromDate">
+      <DataType>String</DataType>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>FromDate</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="ToDate">
+      <DataType>String</DataType>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>ToDate</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <rd:DrawGrid>true</rd:DrawGrid>
+  <InteractiveWidth>8.5in</InteractiveWidth>
+  <rd:SnapToGrid>false</rd:SnapToGrid>
+  <LeftMargin>0.2in</LeftMargin>
+  <PageHeader>
+    <PrintOnFirstPage>true</PrintOnFirstPage>
+    <ReportItems>
+      <Image Name="image1">
+        <Sizing>Fit</Sizing>
+        <Top>0.02021in</Top>
+        <Width>0.6875in</Width>
+        <MIMEType>image/jpeg</MIMEType>
+        <Source>Embedded</Source>
+        <Style />
+        <ZIndex>1</ZIndex>
+        <Left>0.29167in</Left>
+        <Height>0.5625in</Height>
+        <Value>mcb_logo_muslim_commercial_bank</Value>
+      </Image>
+      <Textbox Name="textbox5">
+        <Top>0.14646in</Top>
+        <Width>10.36726in</Width>
+        <Style>
+          <FontSize>11pt</FontSize>
+          <FontWeight>700</FontWeight>
+          <TextAlign>Center</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Left>1.16013in</Left>
+        <Height>0.43625in</Height>
+        <Value>="STATE BANK OF PAKISTAN"&amp; SYSTEM.Environment.NewLine &amp;
+"SUMMARY REBATE FOR THE MONTH OF " &amp;CDate(Parameters!FromDate.Value).ToString("MMMMMMMMM, yyyy")</Value>
+      </Textbox>
+    </ReportItems>
+    <Height>0.64521in</Height>
+    <PrintOnLastPage>true</PrintOnLastPage>
+  </PageHeader>
+  <rd:ReportID>7596eceb-fde5-49e1-bfe6-dfe96817b42d</rd:ReportID>
+  <EmbeddedImages>
+    <EmbeddedImage Name="mcb_logo_muslim_commercial_bank">
+      <MIMEType>image/jpeg</MIMEType>
+      <ImageData>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</ImageData>
+    </EmbeddedImage>
+  </EmbeddedImages>
+  <PageWidth>14.8in</PageWidth>
+  <DataSets>
+    <DataSet Name="MCB_DataSet_SBP_SUMMARY">
+      <Fields>
+        <Field Name="COMPANY_NAME">
+          <DataField>COMPANY_NAME</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="V_MONTH">
+          <DataField>V_MONTH</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="total_trans">
+          <DataField>total_trans</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="amount">
+          <DataField>amount</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DummyDataSource</DataSourceName>
+        <CommandText />
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+      <rd:DataSetInfo>
+        <rd:DataSetName>MCB_DataSet</rd:DataSetName>
+        <rd:TableName>SBP_SUMMARY</rd:TableName>
+      </rd:DataSetInfo>
+    </DataSet>
+  </DataSets>
+  <Code />
+  <Width>11.84032in</Width>
+  <Body>
+    <ReportItems>
+      <Table Name="table1">
+        <Width>10.35416in</Width>
+        <Details>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox4">
+                      <rd:DefaultName>textbox4</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize>8pt</FontSize>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>3</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!COMPANY_NAME.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox6">
+                      <rd:DefaultName>textbox6</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize>8pt</FontSize>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>2</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!V_MONTH.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox12">
+                      <rd:DefaultName>textbox12</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize>8pt</FontSize>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>1</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!total_trans.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox7">
+                      <rd:DefaultName>textbox7</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize>8pt</FontSize>
+                        <TextAlign>Right</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=format(Fields!amount.Value,"###,###,#0.00")</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.25in</Height>
+            </TableRow>
+          </TableRows>
+        </Details>
+        <Header>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox1">
+                      <rd:DefaultName>textbox1</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>11</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>NAME OF EXCHANGE COMPANIES</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox2">
+                      <rd:DefaultName>textbox2</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>10</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>MONTH</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox3">
+                      <rd:DefaultName>textbox3</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>9</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>NO. OF REMITTANCES</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox14">
+                      <rd:DefaultName>textbox14</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>8</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>AMOUNT IN PKR</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.25in</Height>
+            </TableRow>
+          </TableRows>
+        </Header>
+        <TableColumns>
+          <TableColumn>
+            <Width>3.55208in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>2.20833in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>2.23958in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>2.35417in</Width>
+          </TableColumn>
+        </TableColumns>
+        <Height>0.75in</Height>
+        <Footer>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox8">
+                      <rd:DefaultName>textbox8</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>7</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>Total</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox9">
+                      <rd:DefaultName>textbox9</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>6</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox13">
+                      <rd:DefaultName>textbox13</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize>8pt</FontSize>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>5</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=SUM(Fields!total_trans.Value)</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox10">
+                      <rd:DefaultName>textbox10</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize>8pt</FontSize>
+                        <TextAlign>Right</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>4</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=format(sum(Fields!amount.Value),"###,###,#0.00")</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.25in</Height>
+            </TableRow>
+          </TableRows>
+        </Footer>
+      </Table>
+    </ReportItems>
+    <Height>0.77084in</Height>
+  </Body>
+  <Language>en-US</Language>
+</Report>
